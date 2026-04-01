@@ -68,6 +68,7 @@
             z-index: 1000;
             padding: 1rem 2rem;
             background: rgba(10, 14, 26, 0);
+            -webkit-backdrop-filter: blur(0px);
             backdrop-filter: blur(0px);
             transition: all 0.3s ease;
             border-bottom: 1px solid transparent;
@@ -75,6 +76,7 @@
 
         nav.scrolled {
             background: rgba(10, 14, 26, 0.8);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-color);
         }
@@ -109,6 +111,7 @@
             font-size: 0.95rem;
             transition: color 0.3s ease;
             position: relative;
+            padding: 0.25rem 0;
         }
 
         .nav-links a:hover {
@@ -134,6 +137,11 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
+            padding: 8px;
+            min-width: 44px;
+            min-height: 44px;
+            justify-content: center;
+            align-items: center;
         }
 
         .hamburger span {
@@ -147,13 +155,14 @@
 
         /* Hero Section */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
+            min-height: 100dvh;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             overflow: hidden;
-            padding: 2rem;
+            padding: 6rem 2rem 2rem;
         }
 
         .hero-bg-canvas {
@@ -218,6 +227,7 @@
             color: var(--accent-cyan);
             margin-bottom: 2rem;
             animation: fadeInUp 0.8s ease 0.6s both;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
         }
 
@@ -231,6 +241,7 @@
 
         .btn {
             padding: 0.75rem 2rem;
+            min-height: 44px;
             font-size: 1rem;
             border: none;
             border-radius: 50px;
@@ -447,6 +458,7 @@
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 12px;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             text-align: center;
             transition: all 0.3s ease;
@@ -483,6 +495,7 @@
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 12px;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
             cursor: pointer;
@@ -650,7 +663,7 @@
         /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
@@ -660,6 +673,7 @@
             border: 1px solid var(--border-color);
             border-radius: 12px;
             overflow: hidden;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
             transform-style: preserve-3d;
@@ -778,6 +792,7 @@
             border: 1px solid var(--border-color);
             border-radius: 12px;
             text-align: center;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
             position: relative;
@@ -938,6 +953,7 @@
 
         .btn-submit {
             padding: 0.75rem 2rem;
+            min-height: 44px;
             background: var(--gradient-main);
             color: var(--text-primary);
             border: none;
@@ -1001,8 +1017,8 @@
         }
 
         .social-link {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 50%;
@@ -1137,10 +1153,22 @@
                 left: 0;
                 right: 0;
                 background: rgba(5, 13, 26, 0.95);
+                -webkit-backdrop-filter: blur(10px);
                 backdrop-filter: blur(10px);
                 padding: 2rem;
+                z-index: 999;
                 gap: 1rem;
                 border-bottom: 1px solid var(--border-color);
+                animation: slideDown 0.25s ease;
+            }
+
+            @keyframes slideDown {
+                from { opacity: 0; transform: translateY(-8px); }
+                to   { opacity: 1; transform: translateY(0); }
+            }
+
+            .btn-submit {
+                width: 100%;
             }
 
             section {
