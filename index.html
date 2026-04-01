@@ -23,7 +23,28 @@
     <meta name="twitter:title" content="Gnanapiragasam Tharaniraj - Senior Network Engineer">
     <meta name="twitter:description" content="5+ years designing enterprise networks, VXLAN/EVPN fabrics, hybrid cloud, and zero-trust security.">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Gnanapiragasam Tharaniraj",
+      "jobTitle": "Senior Data Centre & Network Engineer",
+      "description": "CCNP-level Network Engineer specialising in VXLAN/EVPN, CLOS fabrics, hybrid cloud connectivity, and Python network automation.",
+      "url": "https://tharaniraj.github.io/",
+      "email": "sgtharaniraj@gmail.com",
+      "telephone": "+94777339218",
+      "address": { "@type": "PostalAddress", "addressLocality": "Colombo", "addressCountry": "LK" },
+      "sameAs": [
+        "https://linkedin.com/in/sgtharaniraj",
+        "https://github.com/Tharaniraj"
+      ],
+      "knowsAbout": ["VXLAN", "EVPN", "BGP", "OSPF", "Spine-Leaf", "SD-WAN", "Python", "Ansible", "Cisco Nexus", "Palo Alto", "Fortinet"]
+    }
+    </script>
     
     <style>
         * {
@@ -1243,6 +1264,167 @@
                 font-size: 80px;
             }
         }
+        /* ── Availability badge ─────────────────────────────── */
+        .availability-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 1rem;
+            background: rgba(0, 245, 212, 0.07);
+            border: 1px solid rgba(0, 245, 212, 0.3);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--accent-cyan-light);
+            margin-bottom: 1.25rem;
+            animation: fadeInUp 0.8s ease 0.05s both;
+        }
+
+        .availability-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-cyan-light);
+            border-radius: 50%;
+            flex-shrink: 0;
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%       { opacity: 0.4; transform: scale(0.75); }
+        }
+
+        /* ── Outline CTA button ─────────────────────────────── */
+        .btn-outline {
+            background: transparent;
+            border: 2px solid rgba(0, 212, 255, 0.35);
+            color: var(--accent-cyan);
+        }
+
+        .btn-outline:hover {
+            background: rgba(0, 212, 255, 0.08);
+            border-color: var(--accent-cyan);
+        }
+
+        /* ── Skill level bar ────────────────────────────────── */
+        .skill-level-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+        }
+
+        .skill-level-bar {
+            flex: 1;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .skill-level-fill {
+            height: 100%;
+            width: 0;
+            background: var(--gradient-main);
+            border-radius: 2px;
+            transition: width 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .skill-card.visible .skill-level-fill {
+            width: var(--level, 0%);
+        }
+
+        .skill-level-label {
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            min-width: 3.5rem;
+            text-align: right;
+        }
+
+        /* ── Project card enhancements ──────────────────────── */
+        .project-top-row {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-category-badge {
+            display: inline-block;
+            padding: 0.18rem 0.6rem;
+            font-size: 0.67rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-radius: 4px;
+        }
+
+        .badge-production {
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .badge-lab {
+            background: rgba(124, 58, 237, 0.12);
+            color: var(--accent-purple-light);
+            border: 1px solid rgba(124, 58, 237, 0.35);
+        }
+
+        .badge-tool {
+            background: rgba(0, 245, 212, 0.08);
+            color: var(--accent-cyan-light);
+            border: 1px solid rgba(0, 245, 212, 0.3);
+        }
+
+        .badge-featured {
+            background: rgba(251, 191, 36, 0.1);
+            color: #fbbf24;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+
+        .project-detail-block {
+            padding: 0.55rem 0;
+        }
+
+        .detail-label {
+            display: block;
+            font-size: 0.67rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-cyan);
+            margin-bottom: 0.3rem;
+        }
+
+        .detail-text {
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        .project-divider {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 0.2rem 0;
+        }
+
+        .project-outcomes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.9rem;
+        }
+
+        .outcome-badge {
+            padding: 0.22rem 0.6rem;
+            background: rgba(0, 245, 212, 0.06);
+            border: 1px solid rgba(0, 245, 212, 0.25);
+            border-radius: 4px;
+            font-size: 0.72rem;
+            color: var(--accent-cyan-light);
+            font-weight: 500;
+        }
     </style>
 
     <script>
@@ -1578,15 +1760,20 @@
         <div class="particle-container"></div>
         
         <div class="hero-content">
+            <div class="availability-badge">
+                <span class="availability-dot"></span>
+                Open to Work — Network · Cloud · Data Centre Roles
+            </div>
             <h1 class="hero-name">Gnanapiragasam<br>Tharaniraj</h1>
             <div class="hero-title"></div>
-            <p class="hero-subtitle">5+ years designing enterprise networks and securing critical infrastructure</p>
-            
+            <p class="hero-subtitle">CCNP-level · VXLAN/EVPN &amp; CLOS Fabrics · Hybrid Cloud Connectivity · Python Automation</p>
+
             <div class="location-badge">📍 Colombo, Sri Lanka | Open to Relocation</div>
-            
+
             <div class="hero-buttons">
                 <button class="btn btn-primary">📥 Download CV</button>
                 <a href="#projects" class="btn btn-secondary">View Projects →</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
             </div>
         </div>
 
@@ -1658,11 +1845,15 @@
                 <div class="skill-category">Data Centre</div>
                 <div class="skill-badges">
                     <span class="badge">VXLAN/EVPN</span>
-                    <span class="badge">Spine-Leaf</span>
-                    <span class="badge">Cisco Nexus</span>
-                    <span class="badge">CloudFabric</span>
+                    <span class="badge">Spine-Leaf CLOS</span>
+                    <span class="badge">Cisco Nexus NX-OS</span>
+                    <span class="badge">BGP EVPN</span>
                     <span class="badge">F5 LTM/GTM</span>
-                    <span class="badge">Structured Cabling</span>
+                    <span class="badge">Anycast Gateway</span>
+                </div>
+                <div class="skill-level-wrap">
+                    <div class="skill-level-bar"><div class="skill-level-fill" style="--level:95%"></div></div>
+                    <span class="skill-level-label">Expert</span>
                 </div>
             </div>
 
@@ -1670,38 +1861,50 @@
                 <div class="skill-icon">🔗</div>
                 <div class="skill-category">Networking</div>
                 <div class="skill-badges">
-                    <span class="badge">BGP/OSPF/MPLS</span>
-                    <span class="badge">IPv4/IPv6</span>
-                    <span class="badge">STP/RSTP</span>
+                    <span class="badge">BGP / OSPF / MPLS</span>
+                    <span class="badge">IPv4 / IPv6</span>
+                    <span class="badge">HSRP / VRRP</span>
                     <span class="badge">QoS</span>
-                    <span class="badge">HSRP/VRRP</span>
-                    <span class="badge">NAT/PAT</span>
+                    <span class="badge">STP / RSTP</span>
+                    <span class="badge">NAT / PAT</span>
+                </div>
+                <div class="skill-level-wrap">
+                    <div class="skill-level-bar"><div class="skill-level-fill" style="--level:95%"></div></div>
+                    <span class="skill-level-label">Expert</span>
                 </div>
             </div>
 
             <div class="skill-card fade-in">
                 <div class="skill-icon">🌐</div>
-                <div class="skill-category">SD-WAN & WAN</div>
+                <div class="skill-category">SD-WAN &amp; WAN</div>
                 <div class="skill-badges">
                     <span class="badge">Fortinet SD-WAN</span>
                     <span class="badge">ADVPN</span>
                     <span class="badge">IPSec VPN</span>
                     <span class="badge">DMVPN</span>
-                    <span class="badge">GRE</span>
+                    <span class="badge">GRE Tunnels</span>
                     <span class="badge">SSL VPN</span>
+                </div>
+                <div class="skill-level-wrap">
+                    <div class="skill-level-bar"><div class="skill-level-fill" style="--level:88%"></div></div>
+                    <span class="skill-level-label">Advanced</span>
                 </div>
             </div>
 
             <div class="skill-card fade-in">
                 <div class="skill-icon">☁️</div>
-                <div class="skill-category">Cloud & Hybrid</div>
+                <div class="skill-category">Cloud &amp; Hybrid</div>
                 <div class="skill-badges">
                     <span class="badge">AWS Direct Connect</span>
-                    <span class="badge">Transit Gateway</span>
+                    <span class="badge">AWS Transit Gateway</span>
                     <span class="badge">OCI FastConnect</span>
                     <span class="badge">Azure ExpressRoute</span>
                     <span class="badge">GCP VPN</span>
                     <span class="badge">Hybrid Architecture</span>
+                </div>
+                <div class="skill-level-wrap">
+                    <div class="skill-level-bar"><div class="skill-level-fill" style="--level:75%"></div></div>
+                    <span class="skill-level-label">Proficient</span>
                 </div>
             </div>
 
@@ -1716,18 +1919,26 @@
                     <span class="badge">PCI DSS</span>
                     <span class="badge">CEH v13</span>
                 </div>
+                <div class="skill-level-wrap">
+                    <div class="skill-level-bar"><div class="skill-level-fill" style="--level:82%"></div></div>
+                    <span class="skill-level-label">Advanced</span>
+                </div>
             </div>
 
             <div class="skill-card fade-in">
                 <div class="skill-icon">🐍</div>
                 <div class="skill-category">Automation</div>
                 <div class="skill-badges">
-                    <span class="badge">Python</span>
+                    <span class="badge">Python 3</span>
                     <span class="badge">Netmiko</span>
                     <span class="badge">Nornir</span>
                     <span class="badge">Ansible</span>
-                    <span class="badge">Bash</span>
+                    <span class="badge">Jinja2</span>
                     <span class="badge">Git</span>
+                </div>
+                <div class="skill-level-wrap">
+                    <div class="skill-level-bar"><div class="skill-level-fill" style="--level:78%"></div></div>
+                    <span class="skill-level-label">Advanced</span>
                 </div>
             </div>
         </div>
@@ -1798,87 +2009,231 @@
         <h2 class="section-title">Featured Projects</h2>
         
         <div class="projects-grid">
+
+            <!-- ① SDN Data Centre Fabric -->
             <div class="project-card fade-in">
                 <div class="project-header">
+                    <div class="project-top-row">
+                        <span class="project-category-badge badge-production">Production</span>
+                        <span class="project-category-badge badge-featured">⭐ Featured</span>
+                    </div>
                     <div class="project-title">SDN Data Centre Fabric</div>
-                    <div class="project-description">Replaced legacy STP with scalable multi-tenant VXLAN/EVPN fabric for HO & DR sites</div>
+                    <div class="project-description">Modernised a legacy STP-based DC into a scalable multi-tenant VXLAN/EVPN CLOS fabric across HQ &amp; DR sites</div>
                 </div>
                 <div class="project-content">
+                    <div class="project-detail-block">
+                        <strong class="detail-label">Problem</strong>
+                        <p class="detail-text">Legacy STP/MSTP fabric caused slow convergence (30–60 s failover), broadcast storms under load, and couldn't support multi-tenancy for growing banking workloads across HQ and DR.</p>
+                    </div>
+                    <hr class="project-divider">
+                    <div class="project-detail-block">
+                        <strong class="detail-label">Solution</strong>
+                        <p class="detail-text">Designed a 2-tier Spine-Leaf CLOS architecture on Cisco Nexus NX-OS. Deployed BGP EVPN as control plane and VXLAN as data plane with L2/L3 VNIs, distributed anycast gateways, and ARP suppression for tenant isolation.</p>
+                    </div>
+                    <hr class="project-divider">
                     <div class="project-tech">
                         <span class="tech-badge">Cisco Nexus NX-OS</span>
-                        <span class="tech-badge">VXLAN/EVPN</span>
+                        <span class="tech-badge">VXLAN / EVPN</span>
                         <span class="tech-badge">BGP EVPN</span>
-                        <span class="tech-badge">Spine-Leaf</span>
+                        <span class="tech-badge">Spine-Leaf CLOS</span>
+                        <span class="tech-badge">Anycast Gateway</span>
+                        <span class="tech-badge">L3 VNI</span>
                     </div>
-                    <div class="project-metrics">✓ Sub-second failover | 99.99% uptime</div>
+                    <div class="project-outcomes">
+                        <span class="outcome-badge">✓ Sub-second failover</span>
+                        <span class="outcome-badge">✓ 99.99% uptime</span>
+                        <span class="outcome-badge">✓ Zero broadcast storms</span>
+                        <span class="outcome-badge">✓ Full multi-tenancy</span>
+                    </div>
                 </div>
             </div>
 
+            <!-- ② Hybrid DC-Cloud Connectivity -->
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <div class="project-title">Hybrid DC-Cloud</div>
-                    <div class="project-description">AWS Direct Connect + Oracle OCI FastConnect with automatic failover for banking apps</div>
+                    <div class="project-top-row">
+                        <span class="project-category-badge badge-production">Production</span>
+                        <span class="project-category-badge badge-featured">⭐ Featured</span>
+                    </div>
+                    <div class="project-title">Hybrid DC-Cloud Connectivity</div>
+                    <div class="project-description">Private dedicated multi-cloud connectivity for a Tier-1 bank via AWS &amp; OCI with automatic BGP failover</div>
                 </div>
                 <div class="project-content">
+                    <div class="project-detail-block">
+                        <strong class="detail-label">Problem</strong>
+                        <p class="detail-text">Banking applications hosted on AWS and Oracle Cloud required private, low-latency connectivity from on-premise DC. Public internet paths failed PCI DSS compliance and SLA requirements.</p>
+                    </div>
+                    <hr class="project-divider">
+                    <div class="project-detail-block">
+                        <strong class="detail-label">Solution</strong>
+                        <p class="detail-text">Provisioned AWS Direct Connect with Transit Gateway for AWS workloads, OCI FastConnect for Oracle Banking Core, and Azure ExpressRoute as tertiary path. Configured BGP route policies with MED/AS-path for automatic failover between providers.</p>
+                    </div>
+                    <hr class="project-divider">
                     <div class="project-tech">
                         <span class="tech-badge">AWS Direct Connect</span>
+                        <span class="tech-badge">AWS Transit Gateway</span>
                         <span class="tech-badge">OCI FastConnect</span>
-                        <span class="tech-badge">Transit Gateway</span>
-                        <span class="tech-badge">BGP Failover</span>
+                        <span class="tech-badge">BGP Route Policy</span>
+                        <span class="tech-badge">Azure ExpressRoute</span>
                     </div>
-                    <div class="project-metrics">✓ Sub-10ms latency SLA | Zero downtime</div>
+                    <div class="project-outcomes">
+                        <span class="outcome-badge">✓ Sub-10ms latency SLA</span>
+                        <span class="outcome-badge">✓ Zero-downtime migration</span>
+                        <span class="outcome-badge">✓ PCI DSS compliant</span>
+                        <span class="outcome-badge">✓ Auto BGP failover</span>
+                    </div>
                 </div>
             </div>
 
+            <!-- ③ VXLAN/EVPN Lab -->
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <div class="project-title">Enterprise SD-WAN Rollout</div>
-                    <div class="project-description">Fortinet SD-WAN deployment across 10+ clients and 300+ branches globally</div>
+                    <div class="project-top-row">
+                        <span class="project-category-badge badge-lab">Lab / Research</span>
+                    </div>
+                    <div class="project-title">VXLAN/EVPN Underlay-Overlay Lab</div>
+                    <div class="project-description">Full CLOS fabric simulation — OSPF underlay, BGP EVPN overlay, symmetric IRB, and ARP suppression — built in EVE-NG</div>
                 </div>
                 <div class="project-content">
+                    <div class="project-detail-block">
+                        <strong class="detail-label">Problem</strong>
+                        <p class="detail-text">Needed a controlled environment to validate VXLAN/EVPN design decisions — VNI assignment, ARP suppression, BUM traffic handling, ECMP load-balancing — before production rollout at the bank.</p>
+                    </div>
+                    <hr class="project-divider">
+                    <div class="project-detail-block">
+                        <strong class="detail-label">Solution</strong>
+                        <p class="detail-text">Built a 2-spine 4-leaf topology in EVE-NG using Cisco NX-OS and Arista vEOS. Configured OSPF + BFD underlay, BGP EVPN control plane, L2VNI and L3VNI with symmetric IRB, ingress replication for BUM, and ECMP across all spine uplinks.</p>
+                    </div>
+                    <hr class="project-divider">
+                    <div class="project-tech">
+                        <span class="tech-badge">EVE-NG</span>
+                        <span class="tech-badge">Cisco NX-OS</span>
+                        <span class="tech-badge">Arista vEOS</span>
+                        <span class="tech-badge">OSPF + BFD</span>
+                        <span class="tech-badge">BGP EVPN</span>
+                        <span class="tech-badge">Symmetric IRB</span>
+                    </div>
+                    <div class="project-outcomes">
+                        <span class="outcome-badge">✓ ARP suppression validated</span>
+                        <span class="outcome-badge">✓ ECMP across 4 paths</span>
+                        <span class="outcome-badge">✓ BUM traffic optimised</span>
+                        <span class="outcome-badge">✓ Production design doc</span>
+                    </div>
+                    <a href="https://github.com/Tharaniraj" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+            </div>
+
+            <!-- ④ Network Automation Pipeline -->
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <div class="project-top-row">
+                        <span class="project-category-badge badge-tool">Automation</span>
+                    </div>
+                    <div class="project-title">Network Automation Pipeline</div>
+                    <div class="project-description">Infrastructure-as-Code pipeline for zero-touch provisioning across 200+ multi-vendor branch devices</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-detail-block">
+                        <strong class="detail-label">Problem</strong>
+                        <p class="detail-text">Manual provisioning of 200+ branch routers and switches took 3–5 days per rollout cycle and was prone to human error and configuration drift across Cisco, Fortinet, and Huawei devices.</p>
+                    </div>
+                    <hr class="project-divider">
+                    <div class="project-detail-block">
+                        <strong class="detail-label">Solution</strong>
+                        <p class="detail-text">Built a Python + Netmiko/Nornir automation framework with Jinja2 templating for multi-vendor config generation. Integrated Ansible playbooks for orchestration and Git for version-controlled config storage with one-command rollback.</p>
+                    </div>
+                    <hr class="project-divider">
+                    <div class="project-tech">
+                        <span class="tech-badge">Python 3</span>
+                        <span class="tech-badge">Netmiko</span>
+                        <span class="tech-badge">Nornir</span>
+                        <span class="tech-badge">Ansible</span>
+                        <span class="tech-badge">Jinja2</span>
+                        <span class="tech-badge">Git</span>
+                    </div>
+                    <div class="project-outcomes">
+                        <span class="outcome-badge">✓ 40% faster provisioning</span>
+                        <span class="outcome-badge">✓ Zero config drift</span>
+                        <span class="outcome-badge">✓ 200+ devices managed</span>
+                        <span class="outcome-badge">✓ Git rollback support</span>
+                    </div>
+                    <a href="https://github.com/Tharaniraj" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+            </div>
+
+            <!-- ⑤ Python IPAM Tool -->
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <div class="project-top-row">
+                        <span class="project-category-badge badge-tool">Tool</span>
+                    </div>
+                    <div class="project-title">Python IPAM Tool</div>
+                    <div class="project-description">Custom IP Address Management desktop app with GUI, subnet calculator, conflict detection, and audit exports</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-detail-block">
+                        <strong class="detail-label">Problem</strong>
+                        <p class="detail-text">No affordable IPAM tool existed for tracking 100,000+ IP assignments across 300+ branches. Spreadsheet-based tracking caused allocation conflicts, duplicate IPs, and audit failures.</p>
+                    </div>
+                    <hr class="project-divider">
+                    <div class="project-detail-block">
+                        <strong class="detail-label">Solution</strong>
+                        <p class="detail-text">Built a desktop IPAM application in Python using Tkinter GUI and SQLite. Features: CIDR subnet calculator, real-time IP search, duplicate/conflict detection, and CSV/JSON export for compliance audit reports.</p>
+                    </div>
+                    <hr class="project-divider">
+                    <div class="project-tech">
+                        <span class="tech-badge">Python 3</span>
+                        <span class="tech-badge">Tkinter GUI</span>
+                        <span class="tech-badge">SQLite</span>
+                        <span class="tech-badge">ipaddress module</span>
+                        <span class="tech-badge">CSV / JSON export</span>
+                    </div>
+                    <div class="project-outcomes">
+                        <span class="outcome-badge">✓ 100k+ IP records</span>
+                        <span class="outcome-badge">✓ Real-time search</span>
+                        <span class="outcome-badge">✓ Zero allocation conflicts</span>
+                        <span class="outcome-badge">✓ Audit-ready exports</span>
+                    </div>
+                    <a href="https://github.com/Tharaniraj" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+            </div>
+
+            <!-- ⑥ Enterprise SD-WAN Rollout -->
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <div class="project-top-row">
+                        <span class="project-category-badge badge-production">Production</span>
+                    </div>
+                    <div class="project-title">Enterprise SD-WAN Rollout</div>
+                    <div class="project-description">Multi-country Fortinet SD-WAN deployment for 10+ enterprise clients across 300+ branches with zero service disruption</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-detail-block">
+                        <strong class="detail-label">Problem</strong>
+                        <p class="detail-text">Enterprise clients with 300+ branches relied on costly MPLS circuits with no application-aware routing. WAN link failures caused full-site outages with no automatic failover path.</p>
+                    </div>
+                    <hr class="project-divider">
+                    <div class="project-detail-block">
+                        <strong class="detail-label">Solution</strong>
+                        <p class="detail-text">Designed Fortinet SD-WAN with ADVPN hub-and-spoke topology, dual-ISP with application SLA steering, and IPSec mesh overlays. Phased MPLS-to-SD-WAN migration with live traffic validation at each step ensured zero downtime cutover.</p>
+                    </div>
+                    <hr class="project-divider">
                     <div class="project-tech">
                         <span class="tech-badge">Fortinet SD-WAN</span>
                         <span class="tech-badge">ADVPN</span>
                         <span class="tech-badge">IPSec VPN</span>
                         <span class="tech-badge">App-Aware Routing</span>
+                        <span class="tech-badge">Dual-ISP HA</span>
                     </div>
-                    <div class="project-metrics">✓ 99.9%+ SLA | Zero service disruptions</div>
+                    <div class="project-outcomes">
+                        <span class="outcome-badge">✓ 99.9%+ SLA maintained</span>
+                        <span class="outcome-badge">✓ 300+ branches migrated</span>
+                        <span class="outcome-badge">✓ MTTR reduced 35%</span>
+                        <span class="outcome-badge">✓ Zero-disruption cutover</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="project-card fade-in">
-                <div class="project-header">
-                    <div class="project-title">Network Automation Pipeline</div>
-                    <div class="project-description">Infrastructure-as-Code pipeline for automated device provisioning and configuration</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-tech">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Netmiko</span>
-                        <span class="tech-badge">Ansible</span>
-                        <span class="tech-badge">Git CI/CD</span>
-                    </div>
-                    <div class="project-metrics">✓ 40% faster provisioning | Zero manual errors</div>
-                    <a href="https://github.com/Tharaniraj" class="project-link" target="_blank">View on GitHub →</a>
-                </div>
-            </div>
-
-            <div class="project-card fade-in">
-                <div class="project-header">
-                    <div class="project-title">Python IPAM Tool</div>
-                    <div class="project-description">Custom IP Address Management tool with Tkinter GUI for enterprise IP tracking</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-tech">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Tkinter GUI</span>
-                        <span class="tech-badge">JSON/SQLite</span>
-                        <span class="tech-badge">IPAM</span>
-                    </div>
-                    <div class="project-metrics">✓ 100k+ records | Real-time search</div>
-                    <a href="https://github.com/Tharaniraj" class="project-link" target="_blank">View on GitHub →</a>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -2010,7 +2365,7 @@
                 <a href="tel:+94777339218" class="social-link">📱</a>
             </div>
             
-            <p>&copy; 2024 Gnanapiragasam Tharaniraj. All rights reserved. | Open to opportunities in Equinix, AWS, DBS Bank, Standard Chartered</p>
+            <p>&copy; 2025 Gnanapiragasam Tharaniraj. All rights reserved. | Open to opportunities in Equinix, AWS, DBS Bank, Standard Chartered</p>
         </div>
     </footer>
 </body>
