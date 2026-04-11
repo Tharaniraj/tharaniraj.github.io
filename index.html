@@ -1,2510 +1,793 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gnanapiragasam Tharaniraj - Senior Data Centre & Network Engineer</title>
-
-    <!-- SEO -->
-    <meta name="description" content="Senior Data Centre & Network Engineer with 5+ years designing enterprise networks, VXLAN/EVPN fabrics, hybrid cloud, and security infrastructure.">
-    <meta name="author" content="Gnanapiragasam Tharaniraj">
-    <meta name="keywords" content="Network Engineer, Data Centre, VXLAN, EVPN, SD-WAN, Python Automation, Cisco, Fortinet, Sri Lanka">
-    <link rel="canonical" href="https://tharaniraj.github.io/">
-
-    <!-- Open Graph (LinkedIn, Slack, Facebook previews) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tharaniraj.github.io/">
-    <meta property="og:title" content="Gnanapiragasam Tharaniraj - Senior Data Centre & Network Engineer">
-    <meta property="og:description" content="5+ years designing enterprise networks, VXLAN/EVPN fabrics, hybrid cloud connectivity, and zero-trust security architectures.">
-    <meta property="og:site_name" content="GT Portfolio">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Gnanapiragasam Tharaniraj - Senior Network Engineer">
-    <meta name="twitter:description" content="5+ years designing enterprise networks, VXLAN/EVPN fabrics, hybrid cloud, and zero-trust security.">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Gnanapiragasam Tharaniraj",
-      "jobTitle": "Senior Data Centre & Network Engineer",
-      "description": "CCNP-level Network Engineer specialising in VXLAN/EVPN, CLOS fabrics, hybrid cloud connectivity, and Python network automation.",
-      "url": "https://tharaniraj.github.io/",
-      "email": "sgtharaniraj@gmail.com",
-      "telephone": "+94777339218",
-      "address": { "@type": "PostalAddress", "addressLocality": "Colombo", "addressCountry": "LK" },
-      "sameAs": [
-        "https://linkedin.com/in/sgtharaniraj",
-        "https://github.com/Tharaniraj"
-      ],
-      "knowsAbout": ["VXLAN", "EVPN", "BGP", "OSPF", "Spine-Leaf", "SD-WAN", "Python", "Ansible", "Cisco Nexus", "Palo Alto", "Fortinet"]
-    }
-    </script>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --bg-primary: #05080f;
-            --bg-secondary: #030610;
-            --bg-card: rgba(10, 16, 35, 0.75);
-            --bg-card-hover: rgba(10, 16, 35, 0.95);
-            --accent-cyan: #00d4ff;
-            --accent-cyan-light: #00f5d4;
-            --accent-purple: #7c3aed;
-            --accent-purple-light: #a855f7;
-            --accent-green: #00ff88;
-            --accent-orange: #ff6b35;
-            --accent-red: #ff3366;
-            --text-primary: #ffffff;
-            --text-secondary: #94a3b8;
-            --border-color: rgba(0, 212, 255, 0.2);
-            --gradient-main: linear-gradient(135deg, #00d4ff, #7c3aed, #a855f7, #ff3366);
-            --gradient-alt:  linear-gradient(135deg, #00ff88, #00d4ff, #a855f7);
-        }
-
-        @keyframes bgShift {
-            0%   { background-position: 0% 50%; }
-            50%  { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #03050e;
-            color: var(--text-primary);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 1rem 2rem;
-            background: rgba(10, 14, 26, 0);
-            -webkit-backdrop-filter: blur(0px);
-            backdrop-filter: blur(0px);
-            transition: all 0.3s ease;
-            border-bottom: 1px solid transparent;
-        }
-
-        nav.scrolled {
-            background: rgba(10, 14, 26, 0.8);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: var(--gradient-main);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-            position: relative;
-            padding: 0.25rem 0;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-cyan);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent-cyan);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 8px;
-            min-width: 44px;
-            min-height: 44px;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background: var(--accent-cyan);
-            margin: 5px 0;
-            transition: all 0.3s ease;
-            border-radius: 2px;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            min-height: 100dvh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            padding: 6rem 2rem 2rem;
-        }
-
-        .hero-bg-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            text-align: center;
-            max-width: 800px;
-        }
-
-        .hero-name {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(3rem, 8vw, 4.5rem);
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            background: var(--gradient-main);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: fadeInDown 0.8s ease;
-        }
-
-        .hero-title {
-            font-size: clamp(1.25rem, 3vw, 1.5rem);
-            color: var(--accent-cyan);
-            margin-bottom: 1.5rem;
-            min-height: 2rem;
-            animation: fadeInUp 0.8s ease 0.2s both;
-        }
-
-        .typing-cursor {
-            animation: blink 0.7s infinite;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-
-        .hero-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            animation: fadeInUp 0.8s ease 0.4s both;
-        }
-
-        .location-badge {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 50px;
-            font-size: 0.9rem;
-            color: var(--accent-cyan);
-            margin-bottom: 2rem;
-            animation: fadeInUp 0.8s ease 0.6s both;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease 0.8s both;
-        }
-
-        .btn {
-            padding: 0.75rem 2rem;
-            min-height: 44px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            font-family: 'Inter', sans-serif;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-primary {
-            background: var(--accent-cyan);
-            color: var(--bg-primary);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: var(--accent-purple);
-            transition: left 0.3s ease;
-            z-index: -1;
-        }
-
-        .btn-primary:hover::before {
-            left: 0;
-        }
-
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid var(--accent-purple);
-            color: var(--accent-purple);
-        }
-
-        .btn-secondary:hover {
-            background: var(--accent-purple);
-            color: var(--text-primary);
-            box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
-            animation: bounce 2s infinite;
-        }
-
-        .scroll-indicator svg {
-            width: 30px;
-            height: 30px;
-            stroke: var(--accent-cyan);
-            fill: none;
-            stroke-width: 2;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(10px); }
-            60% { transform: translateX(-50%) translateY(5px); }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .particle-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 5;
-        }
-
-        .particle {
-            position: absolute;
-            background: var(--accent-cyan);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        .particle-line {
-            position: absolute;
-            stroke: var(--accent-cyan);
-            pointer-events: none;
-            opacity: 0.5;
-        }
-
-        /* Sections */
-        section {
-            padding: 6rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 700;
-            margin-bottom: 3rem;
-            background: var(--gradient-main);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-align: center;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--gradient-main);
-            margin: 1rem auto 0;
-            border-radius: 2px;
-        }
-
-        .divider {
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
-            margin: 4rem 0;
-        }
-
-        /* About Section */
-        .about-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-image {
-            position: relative;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .avatar-placeholder {
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle at 30% 30%, var(--accent-cyan), var(--accent-purple));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 120px;
-            position: relative;
-            animation: float 3s ease-in-out infinite;
-            border: 3px solid var(--accent-cyan);
-            box-shadow: 0 0 60px rgba(0, 212, 255, 0.3), inset 0 0 60px rgba(124, 58, 237, 0.2);
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .about-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--accent-cyan);
-        }
-
-        .about-content p {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-
-        .stat-card {
-            padding: 1.5rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            background: var(--bg-card-hover);
-            border-color: var(--accent-cyan);
-            transform: translateY(-5px);
-        }
-
-        .stat-number {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--accent-cyan);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        /* Skills Section */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-card {
-            padding: 2rem;
-            background: rgba(8, 12, 28, 0.72);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            -webkit-backdrop-filter: blur(12px);
-            backdrop-filter: blur(12px);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .skill-card:hover {
-            background: var(--bg-card-hover);
-            border-color: var(--accent-purple);
-            transform: translateY(-10px);
-            box-shadow: 0 0 40px rgba(124, 58, 237, 0.3);
-        }
-
-        .skill-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--gradient-main);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .skill-category {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--accent-cyan);
-        }
-
-        .skill-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .badge {
-            padding: 0.4rem 0.8rem;
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            font-size: 0.8rem;
-            color: var(--accent-cyan);
-            transition: all 0.3s ease;
-        }
-
-        .badge:hover {
-            background: rgba(0, 212, 255, 0.2);
-            border-color: var(--accent-cyan);
-            transform: scale(1.05);
-        }
-
-        /* Experience Section */
-        .timeline {
-            position: relative;
-            padding-left: 4rem;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 10px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, var(--accent-cyan), var(--accent-purple));
-            animation: drawLine 2s ease-in-out forwards;
-        }
-
-        @keyframes drawLine {
-            from { height: 0; }
-            to { height: 100%; }
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 3rem;
-            padding: 1.5rem;
-            background: rgba(8, 12, 28, 0.72);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            -webkit-backdrop-filter: blur(12px);
-            backdrop-filter: blur(12px);
-            transition: all 0.3s ease;
-            animation: slideInLeft 0.6s ease both;
-        }
-
-        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
-        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
-        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
-        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -2.9rem;
-            top: 1.8rem;
-            width: 16px;
-            height: 16px;
-            background: var(--accent-cyan);
-            border-radius: 50%;
-            border: 3px solid var(--bg-primary);
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-        }
-
-        .timeline-item:hover {
-            background: var(--bg-card-hover);
-            border-color: var(--accent-cyan);
-            transform: translateX(10px);
-        }
-
-        .timeline-date {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.9rem;
-            color: var(--accent-purple);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--accent-cyan);
-        }
-
-        .timeline-company {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-bullets {
-            list-style: none;
-            padding: 0;
-        }
-
-        .timeline-bullets li {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .timeline-bullets li::before {
-            content: '►';
-            position: absolute;
-            left: 0;
-            color: var(--accent-purple);
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            position: relative;
-            background: rgba(8, 12, 28, 0.72);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            overflow: hidden;
-            -webkit-backdrop-filter: blur(12px);
-            backdrop-filter: blur(12px);
-            transition: all 0.3s ease;
-            transform-style: preserve-3d;
-            perspective: 1000px;
-            cursor: pointer;
-            animation: fadeIn 0.6s ease both;
-        }
-
-        .project-card:nth-child(1) { animation-delay: 0.1s; }
-        .project-card:nth-child(2) { animation-delay: 0.2s; }
-        .project-card:nth-child(3) { animation-delay: 0.3s; }
-        .project-card:nth-child(4) { animation-delay: 0.4s; }
-        .project-card:nth-child(5) { animation-delay: 0.5s; }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .project-card:hover {
-            border-color: var(--accent-cyan);
-            box-shadow: 0 0 40px rgba(0, 212, 255, 0.2);
-            transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
-        }
-
-        .project-header {
-            padding: 2rem;
-            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1));
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .project-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--accent-cyan);
-            margin-bottom: 0.5rem;
-        }
-
-        .project-description {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-
-        .project-metrics {
-            font-size: 0.85rem;
-            color: var(--accent-purple);
-            font-weight: 600;
-            padding: 0.5rem 0;
-            border-top: 1px solid var(--border-color);
-            padding-top: 0.5rem;
-        }
-
-        .project-content {
-            padding: 1.5rem 2rem;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .tech-badge {
-            padding: 0.3rem 0.7rem;
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            font-size: 0.75rem;
-            color: var(--accent-cyan);
-            transition: all 0.3s ease;
-        }
-
-        .tech-badge:hover {
-            background: rgba(0, 212, 255, 0.2);
-            border-color: var(--accent-cyan);
-        }
-
-        .project-link {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            color: var(--accent-cyan);
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: all 0.3s ease;
-        }
-
-        .project-link:hover {
-            background: var(--accent-cyan);
-            color: var(--bg-primary);
-            transform: translateX(5px);
-        }
-
-        /* Certifications Section */
-        .certifications-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .cert-card {
-            padding: 1.5rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            text-align: center;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cert-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
-            transition: left 0.5s ease;
-            z-index: 0;
-        }
-
-        .cert-card:hover::before {
-            left: 100%;
-        }
-
-        .cert-card:hover {
-            background: var(--bg-card-hover);
-            border-color: var(--accent-purple);
-            transform: translateY(-8px);
-            box-shadow: 0 0 30px rgba(124, 58, 237, 0.3);
-        }
-
-        .cert-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cert-name {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--accent-cyan);
-            margin-bottom: 0.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cert-issuer {
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            margin-bottom: 0.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cert-status {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background: rgba(0, 245, 212, 0.1);
-            border: 1px solid var(--accent-cyan-light);
-            border-radius: 20px;
-            font-size: 0.75rem;
-            color: var(--accent-cyan-light);
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Contact Section */
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .contact-info h3 {
-            font-size: 1.3rem;
-            color: var(--accent-cyan);
-            margin-bottom: 1rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .contact-item-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--gradient-main);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-
-        .contact-item a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-item a:hover {
-            color: var(--accent-cyan);
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .form-group label {
-            color: var(--accent-cyan);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            padding: 0.75rem 1rem;
-            background: rgba(15, 23, 42, 0.5);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: var(--text-primary);
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent-cyan);
-            background: rgba(0, 212, 255, 0.05);
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .btn-submit {
-            padding: 0.75rem 2rem;
-            min-height: 44px;
-            background: var(--gradient-main);
-            color: var(--text-primary);
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .btn-submit::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            transition: left 0.3s ease;
-            z-index: -1;
-        }
-
-        .btn-submit:hover::before {
-            left: 100%;
-        }
-
-        .btn-submit:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.3);
-        }
-
-        /* Footer */
-        footer {
-            padding: 2rem;
-            text-align: center;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-secondary);
-            background: var(--bg-secondary);
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .footer-tagline {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1rem;
-            color: var(--accent-cyan);
-            margin-bottom: 1rem;
-        }
-
-        .footer-socials {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-
-        .social-link {
-            width: 44px;
-            height: 44px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-cyan);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1.2rem;
-        }
-
-        .social-link:hover {
-            background: var(--accent-cyan);
-            color: var(--bg-primary);
-            transform: translateY(-5px);
-        }
-
-        /* Scroll animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Geometric Background Shapes */
-        .geometric-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .shape {
-            position: absolute;
-            filter: blur(80px);
-            animation: float 6s ease-in-out infinite;
-            mix-blend-mode: screen;
-        }
-
-        .shape1 {
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(0,212,255,0.22) 0%, transparent 70%);
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            top: 5%;
-            left: 5%;
-            animation-duration: 9s;
-        }
-
-        .shape2 {
-            width: 450px;
-            height: 450px;
-            background: radial-gradient(circle, rgba(168,85,247,0.2) 0%, transparent 70%);
-            border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
-            top: 55%;
-            right: 5%;
-            animation-duration: 11s;
-            animation-delay: 1.5s;
-        }
-
-        .shape3 {
-            width: 380px;
-            height: 380px;
-            background: radial-gradient(circle, rgba(0,255,136,0.14) 0%, transparent 70%);
-            border-radius: 30% 30% 70% 70% / 30% 70% 70% 30%;
-            bottom: 5%;
-            left: 45%;
-            animation-duration: 13s;
-            animation-delay: 3s;
-        }
-
-        /* ── Global overflow guard ──────────────────────────── */
-        html, body { max-width: 100%; overflow-x: hidden; }
-
-        /* ── Responsive ─────────────────────────────────────── */
-        @media (max-width: 1024px) {
-            .about-container,
-            .contact-container {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-
-            .about-image { height: 300px; }
-
-            .skills-container,
-            .projects-grid,
-            .certifications-container {
-                grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
-            }
-
-            .timeline { padding-left: 2rem; }
-            .timeline::before { left: 3px; }
-            .timeline-item::before { left: -2.4rem; }
-
-            .project-card:hover { transform: translateY(-6px); }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hamburger  { display: flex; }
-
-            .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(10px, 10px); }
-            .hamburger.active span:nth-child(2) { opacity: 0; }
-            .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(8px, -8px); }
-
-            .nav-links.mobile-menu {
-                display: flex;
-                flex-direction: column;
-                position: fixed;
-                top: 60px;
-                left: 0;
-                right: 0;
-                background: rgba(5, 13, 26, 0.97);
-                -webkit-backdrop-filter: blur(14px);
-                backdrop-filter: blur(14px);
-                padding: 1.5rem 2rem;
-                z-index: 999;
-                gap: 1rem;
-                border-bottom: 1px solid var(--border-color);
-                animation: slideDown 0.25s ease;
-            }
-
-            @keyframes slideDown {
-                from { opacity: 0; transform: translateY(-8px); }
-                to   { opacity: 1; transform: translateY(0); }
-            }
-
-            section { padding: 4rem 1.25rem; }
-
-            .hero-content { padding: 0 0.5rem; }
-            .hero-buttons { flex-direction: column; align-items: stretch; }
-            .btn { width: 100%; justify-content: center; text-align: center; }
-            .btn-submit { width: 100%; }
-
-            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-
-            .timeline { padding-left: 1.5rem; }
-            .timeline::before { left: 2px; }
-            .timeline-item::before { left: -1.95rem; }
-            .timeline-item { padding: 1.25rem; }
-            .timeline-item:hover { transform: none; }
-
-            .projects-grid,
-            .skills-container,
-            .certifications-container {
-                grid-template-columns: 1fr;
-            }
-
-            .project-card:hover { transform: translateY(-4px); }
-
-            .hero-name { font-size: clamp(2rem, 7vw, 2.8rem); }
-            .footer-socials { flex-wrap: wrap; justify-content: center; }
-
-            .location-badge { font-size: 0.8rem; padding: 0.4rem 1rem; }
-
-            /* Skill badges wrapping fix */
-            .skill-badges { gap: 0.4rem; }
-            .badge { font-size: 0.75rem; padding: 0.3rem 0.65rem; }
-        }
-
-        @media (max-width: 480px) {
-            section { padding: 3rem 1rem; }
-
-            .hero-name    { font-size: clamp(1.7rem, 8vw, 2.2rem); }
-            .hero-subtitle { font-size: 0.9rem; }
-            .section-title { font-size: clamp(1.4rem, 5vw, 1.8rem); }
-
-            .nav-links.mobile-menu { padding: 1.2rem 1.5rem; }
-
-            .about-image { height: 220px; }
-            .avatar-placeholder { width: 160px; height: 160px; font-size: 64px; }
-
-            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
-            .stat-card  { padding: 1rem; }
-            .stat-number { font-size: 1.6rem; }
-
-            .skill-card { padding: 1.25rem; }
-            .project-header, .project-content { padding: 1.25rem; }
-
-            .timeline { padding-left: 1.25rem; }
-            .timeline-item::before { width: 12px; height: 12px; left: -1.75rem; top: 1.4rem; }
-
-            .btn { font-size: 0.9rem; padding: 0.7rem 1.5rem; }
-            .hero-buttons { gap: 0.75rem; }
-        }
-
-        @media (max-width: 360px) {
-            .hero-name { font-size: 1.5rem; }
-            section    { padding: 2.5rem 0.75rem; }
-            .stats-grid { grid-template-columns: 1fr; }
-        }
-        /* ── Availability badge ─────────────────────────────── */
-        .availability-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.35rem 1rem;
-            background: rgba(0, 245, 212, 0.07);
-            border: 1px solid rgba(0, 245, 212, 0.3);
-            border-radius: 50px;
-            font-size: 0.8rem;
-            color: var(--accent-cyan-light);
-            margin-bottom: 1.25rem;
-            animation: fadeInUp 0.8s ease 0.05s both;
-        }
-
-        .availability-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--accent-cyan-light);
-            border-radius: 50%;
-            flex-shrink: 0;
-            animation: pulse-dot 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse-dot {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50%       { opacity: 0.4; transform: scale(0.75); }
-        }
-
-        /* ── Outline CTA button ─────────────────────────────── */
-        .btn-outline {
-            background: transparent;
-            border: 2px solid rgba(0, 212, 255, 0.35);
-            color: var(--accent-cyan);
-        }
-
-        .btn-outline:hover {
-            background: rgba(0, 212, 255, 0.08);
-            border-color: var(--accent-cyan);
-        }
-
-        /* ── Skill level bar ────────────────────────────────── */
-        .skill-level-wrap {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-top: 1.25rem;
-        }
-
-        .skill-level-bar {
-            flex: 1;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.07);
-            border-radius: 2px;
-            overflow: hidden;
-        }
-
-        .skill-level-fill {
-            height: 100%;
-            width: 0;
-            background: var(--gradient-main);
-            border-radius: 2px;
-            transition: width 1.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .skill-card.visible .skill-level-fill {
-            width: var(--level, 0%);
-        }
-
-        .skill-level-label {
-            font-size: 0.72rem;
-            color: var(--text-secondary);
-            white-space: nowrap;
-            min-width: 3.5rem;
-            text-align: right;
-        }
-
-        /* ── Project card enhancements ──────────────────────── */
-        .project-top-row {
-            display: flex;
-            gap: 0.4rem;
-            flex-wrap: wrap;
-            margin-bottom: 0.75rem;
-        }
-
-        .project-category-badge {
-            display: inline-block;
-            padding: 0.18rem 0.6rem;
-            font-size: 0.67rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            border-radius: 4px;
-        }
-
-        .badge-production {
-            background: rgba(0, 212, 255, 0.1);
-            color: var(--accent-cyan);
-            border: 1px solid rgba(0, 212, 255, 0.3);
-        }
-
-        .badge-lab {
-            background: rgba(124, 58, 237, 0.12);
-            color: var(--accent-purple-light);
-            border: 1px solid rgba(124, 58, 237, 0.35);
-        }
-
-        .badge-tool {
-            background: rgba(0, 245, 212, 0.08);
-            color: var(--accent-cyan-light);
-            border: 1px solid rgba(0, 245, 212, 0.3);
-        }
-
-        .badge-featured {
-            background: rgba(251, 191, 36, 0.1);
-            color: #fbbf24;
-            border: 1px solid rgba(251, 191, 36, 0.3);
-        }
-
-        .project-detail-block {
-            padding: 0.55rem 0;
-        }
-
-        .detail-label {
-            display: block;
-            font-size: 0.67rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent-cyan);
-            margin-bottom: 0.3rem;
-        }
-
-        .detail-text {
-            font-size: 0.84rem;
-            color: var(--text-secondary);
-            line-height: 1.65;
-        }
-
-        .project-divider {
-            border: none;
-            border-top: 1px solid var(--border-color);
-            margin: 0.2rem 0;
-        }
-
-        .project-outcomes {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-top: 0.9rem;
-        }
-
-        .outcome-badge {
-            padding: 0.22rem 0.6rem;
-            background: rgba(0, 245, 212, 0.06);
-            border: 1px solid rgba(0, 245, 212, 0.25);
-            border-radius: 4px;
-            font-size: 0.72rem;
-            color: var(--accent-cyan-light);
-            font-weight: 500;
-        }
-    </style>
-
-    <script>
-        // Initialize animations and interactions
-        document.addEventListener('DOMContentLoaded', () => {
-            // Mobile menu toggle
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-            
-            if (hamburger && navLinks) {
-                hamburger.addEventListener('click', () => {
-                    hamburger.classList.toggle('active');
-                    navLinks.classList.toggle('mobile-menu');
-                });
-            }
-
-            // Close mobile menu on link click
-            const navAnchors = document.querySelectorAll('.nav-links a');
-            navAnchors.forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger?.classList.remove('active');
-                    navLinks?.classList.remove('mobile-menu');
-                });
-            });
-
-            // Scroll animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -100px 0px'
-            };
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-            // Nav scroll effect
-            window.addEventListener('scroll', () => {
-                const nav = document.querySelector('nav');
-                if (window.scrollY > 50) {
-                    nav.classList.add('scrolled');
-                } else {
-                    nav.classList.remove('scrolled');
-                }
-            });
-
-            // Animate stat counters
-            const animateCounter = (target, duration = 2000) => {
-                const finalValue = parseInt(target.textContent);
-                const increment = finalValue / (duration / 16);
-                let current = 0;
-
-                const counter = setInterval(() => {
-                    current += increment;
-                    if (current >= finalValue) {
-                        target.textContent = finalValue;
-                        clearInterval(counter);
-                    } else {
-                        target.textContent = Math.floor(current);
-                    }
-                }, 16);
-            };
-
-            const statsObserver = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-                        entry.target.classList.add('animated');
-                        entry.target.querySelectorAll('.stat-number').forEach(number => {
-                            animateCounter(number);
-                        });
-                        statsObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            const statsSection = document.querySelector('.stats-grid');
-            if (statsSection) statsObserver.observe(statsSection);
-
-            // CV download handled via <a> tag with download attribute
-
-            // Typing animation
-            initTypeAnimation();
-
-            // Canvas animations
-            initNetworkAnimation();
-            initParticles();
-
-            // Form submission
-            const form = document.querySelector('.contact-form');
-            if (form) {
-                form.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    alert('Thank you for your message! I will get back to you soon.');
-                    form.reset();
-                });
-            }
-
-            // Add scroll fade-in classes and observe them
-            document.querySelectorAll('section > *:not(.section-title):not(.divider)').forEach(el => {
-                el.classList.add('fade-in');
-                observer.observe(el);
-            });
-        });
-
-        // Typing animation
-        function initTypeAnimation() {
-            const titles = [
-                'Data Centre Engineer',
-                'Network Engineer',
-                'Network Security Engineer',
-                'Python Automation Developer'
-            ];
-            
-            let titleIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            const typingElement = document.querySelector('.hero-title');
-            const typingSpeed = 100;
-            const deletingSpeed = 50;
-            const pauseTime = 2000;
-
-            function type() {
-                const currentTitle = titles[titleIndex];
-                
-                if (isDeleting) {
-                    charIndex--;
-                } else {
-                    charIndex++;
-                }
-
-                let displayText = currentTitle.substring(0, charIndex);
-                typingElement.innerHTML = displayText + (charIndex > 0 ? '<span class="typing-cursor">|</span>' : '');
-                
-                let nextSpeed = isDeleting ? deletingSpeed : typingSpeed;
-
-                if (!isDeleting && charIndex === currentTitle.length) {
-                    nextSpeed = pauseTime;
-                    isDeleting = true;
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    titleIndex = (titleIndex + 1) % titles.length;
-                    nextSpeed = typingSpeed;
-                }
-
-                setTimeout(type, nextSpeed);
-            }
-
-            type();
-        }
-
-        // Datacenter & Cybersecurity Scene Animation
-        function initNetworkAnimation() {
-            const canvas = document.querySelector('.hero-bg-canvas');
-            if (!canvas) return;
-            const ctx = canvas.getContext('2d');
-
-            function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-            resize();
-            window.addEventListener('resize', () => { resize(); rebuildScene(); });
-
-            const ledPalette = ['#ffffff','#e2e8f0','#cbd5e1','#94a3b8','#f1f5f9','#b8c4d0','#dde4ed','#c0cad8','#a8b4c4'];
-
-            class RackLED {
-                constructor(x, y) {
-                    this.x = x; this.y = y;
-                    this.color = ledPalette[Math.floor(Math.random() * ledPalette.length)];
-                    this.on    = Math.random() > 0.25;
-                    this.phase = Math.random() * Math.PI * 2;
-                    this.rate  = 0.04 + Math.random() * 0.06;
-                    this.size  = 1.8 + Math.random() * 1.4;
-                }
-                update() {
-                    this.phase += this.rate;
-                    if (Math.random() < 0.003) { this.on = !this.on; this.color = ledPalette[Math.floor(Math.random() * ledPalette.length)]; }
-                }
-                draw() {
-                    if (!this.on) return;
-                    const b = 0.55 + Math.sin(this.phase) * 0.45;
-                    ctx.save();
-                    ctx.shadowColor = this.color; ctx.shadowBlur = 7;
-                    ctx.globalAlpha = b;
-                    ctx.fillStyle   = this.color;
-                    ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill();
-                    ctx.restore();
-                }
-            }
-
-            class ServerRack {
-                constructor(cx, side) {
-                    this.cx = cx; this.side = side;
-                    this.w  = Math.max(38, Math.min(52, canvas.width * 0.038));
-                    this.h  = canvas.height * 0.82;
-                    this.y  = canvas.height * 0.09;
-                    this.leds = [];
-                    const unitH = 16, units = Math.floor(this.h / unitH);
-                    for (let u = 0; u < units; u++) {
-                        const uy = this.y + u * unitH + 7;
-                        const lc = Math.floor(this.w / 10);
-                        for (let l = 0; l < lc; l++) this.leds.push(new RackLED(this.cx - this.w*0.5 + 5 + l*10, uy));
-                    }
-                }
-                draw() {
-                    const rg = ctx.createLinearGradient(this.cx-this.w/2, 0, this.cx+this.w/2, 0);
-                    if (this.side === 'left') { rg.addColorStop(0,'rgba(0,20,50,0.95)'); rg.addColorStop(1,'rgba(0,10,28,0.6)'); }
-                    else                     { rg.addColorStop(0,'rgba(0,10,28,0.6)');  rg.addColorStop(1,'rgba(0,20,50,0.95)'); }
-                    ctx.fillStyle = rg; ctx.fillRect(this.cx-this.w/2, this.y, this.w, this.h);
-                    ctx.strokeStyle = 'rgba(180,196,220,0.2)'; ctx.lineWidth = 1;
-                    ctx.strokeRect(this.cx-this.w/2, this.y, this.w, this.h);
-                    ctx.strokeStyle = 'rgba(120,140,170,0.22)'; ctx.lineWidth = 0.5;
-                    const units = Math.floor(this.h / 16);
-                    for (let u = 1; u < units; u++) {
-                        const ly = this.y + u * 16;
-                        ctx.beginPath(); ctx.moveTo(this.cx-this.w/2, ly); ctx.lineTo(this.cx+this.w/2, ly); ctx.stroke();
-                    }
-                    const gw = 90, gx = this.side === 'left' ? this.cx+this.w/2 : this.cx-this.w/2-gw;
-                    const gg = ctx.createLinearGradient(gx, 0, gx+gw, 0);
-                    if (this.side==='left') { gg.addColorStop(0,'rgba(180,200,230,0.06)'); gg.addColorStop(1,'transparent'); }
-                    else                   { gg.addColorStop(0,'transparent'); gg.addColorStop(1,'rgba(180,200,230,0.06)'); }
-                    ctx.fillStyle = gg; ctx.fillRect(gx, this.y, gw, this.h);
-                    this.leds.forEach(l => { l.update(); l.draw(); });
-                }
-            }
-
-            class CircuitTrace {
-                constructor() { this.reset(); }
-                reset() {
-                    const m = canvas.width * 0.08;
-                    this.sx = m + Math.random() * (canvas.width - m*2); this.sy = Math.random() * canvas.height;
-                    this.color = ['#e2e8f0','#94a3b8','#cbd5e1','#b8c4d0','#dde4ed'][Math.floor(Math.random()*5)];
-                    this.alpha = 0.08 + Math.random()*0.14; this.lw = 0.6 + Math.random()*0.8; this.segs = [];
-                    let cx = this.sx, cy = this.sy;
-                    for (let i = 0; i < Math.floor(Math.random()*5+3); i++) {
-                        const len = 25 + Math.random()*90;
-                        if (i%2===0) { const nx=cx+(Math.random()>.5?len:-len); this.segs.push([cx,cy,nx,cy]); cx=nx; }
-                        else         { const ny=cy+(Math.random()>.5?len:-len); this.segs.push([cx,cy,cx,ny]); cy=ny; }
-                    }
-                    this.tlen = this.segs.reduce((s,g) => s + Math.hypot(g[2]-g[0],g[3]-g[1]), 0);
-                    this.pp = 0; this.ps = 0.003 + Math.random()*0.007;
-                }
-                update() { this.pp += this.ps; if (this.pp > 1.3) this.reset(); }
-                draw() {
-                    ctx.save(); ctx.strokeStyle = this.color; ctx.globalAlpha = this.alpha; ctx.lineWidth = this.lw;
-                    ctx.beginPath();
-                    this.segs.forEach((s,i) => { i===0 ? ctx.moveTo(s[0],s[1]) : null; ctx.lineTo(s[2],s[3]); });
-                    ctx.stroke();
-                    ctx.globalAlpha = this.alpha * 1.8; ctx.fillStyle = this.color;
-                    this.segs.forEach(s => { ctx.beginPath(); ctx.arc(s[0],s[1],2.5,0,Math.PI*2); ctx.fill(); });
-                    if (this.pp <= 1 && this.segs.length > 0) {
-                        let tgt = this.pp * this.tlen, acc = 0, px = this.segs[0][0], py = this.segs[0][1];
-                        for (const s of this.segs) {
-                            const sl = Math.hypot(s[2]-s[0], s[3]-s[1]);
-                            if (acc+sl >= tgt) { const t=(tgt-acc)/sl; px=s[0]+(s[2]-s[0])*t; py=s[1]+(s[3]-s[1])*t; break; }
-                            acc += sl;
-                        }
-                        ctx.globalAlpha = 1; ctx.shadowColor = this.color; ctx.shadowBlur = 14;
-                        ctx.fillStyle = this.color; ctx.beginPath(); ctx.arc(px,py,3.5,0,Math.PI*2); ctx.fill();
-                    }
-                    ctx.restore();
-                }
-            }
-
-            class SecurityIcon {
-                constructor(d) { this.delay = d||0; this.reset(); this.life = Math.random()*200; }
-                reset() {
-                    this.x = canvas.width*0.15 + Math.random()*canvas.width*0.7;
-                    this.y = canvas.height*0.1  + Math.random()*canvas.height*0.75;
-                    this.size = 14 + Math.random()*22; this.type = Math.random()>.5 ? 'lock' : 'shield';
-                    this.color = ['#ffffff','#e2e8f0','#cbd5e1','#94a3b8'][Math.floor(Math.random()*4)];
-                    this.maxL = 150 + Math.random()*200; this.life = 0; this.vy = -0.25 - Math.random()*0.3;
-                    this.pulse = Math.random() * Math.PI * 2;
-                }
-                get alpha() {
-                    const l=this.life, m=this.maxL;
-                    if (l<30)   return (l/30)*0.55;
-                    if (l>m-30) return ((m-l)/30)*0.55;
-                    return 0.25 + Math.sin(this.pulse)*0.12;
-                }
-                update() { this.life++; this.pulse += 0.04; this.y += this.vy; if (this.life >= this.maxL) this.reset(); }
-                draw() {
-                    const {x, y, size:s, color, alpha} = this;
-                    ctx.save(); ctx.globalAlpha = alpha; ctx.strokeStyle = color; ctx.lineWidth = 1.5;
-                    ctx.shadowColor = color; ctx.shadowBlur = 20; ctx.fillStyle = color+'22';
-                    if (this.type === 'lock') {
-                        ctx.beginPath(); ctx.roundRect(x-s*.35, y, s*.7, s*.55, 3); ctx.fill(); ctx.stroke();
-                        ctx.beginPath(); ctx.arc(x, y, s*.28, Math.PI, 0); ctx.stroke();
-                        ctx.fillStyle = color; ctx.globalAlpha = alpha*1.2;
-                        ctx.beginPath(); ctx.arc(x, y+s*.22, s*.09, 0, Math.PI*2); ctx.fill();
-                        ctx.beginPath(); ctx.moveTo(x, y+s*.22); ctx.lineTo(x-s*.07, y+s*.44); ctx.lineTo(x+s*.07, y+s*.44); ctx.closePath(); ctx.fill();
-                    } else {
-                        ctx.beginPath();
-                        ctx.moveTo(x, y-s*.5); ctx.lineTo(x+s*.45, y-s*.2); ctx.lineTo(x+s*.45, y+s*.15);
-                        ctx.quadraticCurveTo(x+s*.45, y+s*.5, x, y+s*.55);
-                        ctx.quadraticCurveTo(x-s*.45, y+s*.5, x-s*.45, y+s*.15);
-                        ctx.lineTo(x-s*.45, y-s*.2); ctx.closePath(); ctx.fill(); ctx.stroke();
-                        ctx.strokeStyle = color; ctx.globalAlpha = alpha*1.5;
-                        ctx.beginPath(); ctx.moveTo(x-s*.18, y+s*.1); ctx.lineTo(x, y+s*.28); ctx.lineTo(x+s*.22, y-s*.06); ctx.stroke();
-                    }
-                    ctx.globalAlpha = alpha*.35; ctx.shadowBlur = 0;
-                    ctx.beginPath(); ctx.arc(x, y+s*.1, s*.75+Math.sin(this.pulse)*5, 0, Math.PI*2); ctx.stroke();
-                    ctx.restore();
-                }
-            }
-
-            class MatrixCol {
-                constructor(init) { this.x = Math.random()*canvas.width; this.y = init ? Math.random()*canvas.height : -30; this.setup(); }
-                setup() {
-                    this.spd = 1.2 + Math.random()*2.8;
-                    this.color = ['#e2e8f0','#94a3b8','#cbd5e1','#ffffff','#b8c4d0'][Math.floor(Math.random()*5)];
-                    this.len = Math.floor(Math.random()*14+6); this.fsize = 9 + Math.random()*5;
-                    this.alpha = 0.12 + Math.random()*0.22; this.tick = 0;
-                    this.chars = Array.from({length: this.len}, () => this.rndChar());
-                }
-                rndChar() {
-                    const r = Math.random();
-                    if (r < .45) return r < .22 ? '1' : '0';
-                    if (r < .75) return String.fromCharCode(0x30A0 + Math.floor(Math.random()*96));
-                    return String.fromCharCode(0x2580 + Math.floor(Math.random()*32));
-                }
-                update() {
-                    this.y += this.spd; this.tick++;
-                    if (this.tick%6===0 && Math.random()<.4) this.chars[Math.floor(Math.random()*this.len)] = this.rndChar();
-                    if (this.y > canvas.height+60) { this.y = -30; this.x = Math.random()*canvas.width; this.setup(); }
-                }
-                draw() {
-                    ctx.save(); ctx.font = `${this.fsize}px monospace`;
-                    this.chars.forEach((ch, i) => {
-                        ctx.globalAlpha = this.alpha * (1 - i/this.len);
-                        ctx.fillStyle   = i === 0 ? '#ffffff' : this.color;
-                        ctx.fillText(ch, this.x, this.y - i*(this.fsize+1.5));
-                    });
-                    ctx.restore();
-                }
-            }
-
-            function drawFloor() {
-                const vpy = canvas.height*.62, vpx = canvas.width*.5;
-                ctx.save();
-                for (let i = 0; i < 14; i++) {
-                    const t = i/13, y = vpy+(canvas.height-vpy)*t, sp = (y-vpy)/(canvas.height-vpy);
-                    ctx.strokeStyle = `rgba(180,196,216,${0.03+sp*.07})`; ctx.lineWidth = .7;
-                    ctx.beginPath(); ctx.moveTo(vpx-sp*canvas.width*.85, y); ctx.lineTo(vpx+sp*canvas.width*.85, y); ctx.stroke();
-                }
-                for (let i = 0; i <= 18; i++) {
-                    const bx = vpx - canvas.width*.85*.5 + (i/18)*canvas.width*.85;
-                    ctx.strokeStyle = 'rgba(160,180,210,0.05)'; ctx.lineWidth = .7;
-                    ctx.beginPath(); ctx.moveTo(vpx, vpy); ctx.lineTo(bx, canvas.height); ctx.stroke();
-                }
-                ctx.restore();
-            }
-
-            function drawCeiling() {
-                [.22, .5, .78].forEach(t => {
-                    const x = canvas.width*t;
-                    const gr = ctx.createRadialGradient(x,0,0,x,0,140);
-                    gr.addColorStop(0, 'rgba(220,228,240,0.11)'); gr.addColorStop(.5, 'rgba(180,192,210,0.04)'); gr.addColorStop(1, 'transparent');
-                    ctx.fillStyle = gr; ctx.fillRect(x-140, 0, 280, 160);
-                });
-            }
-
-            let scanY = 0, scanDir = 1;
-            function drawScan() {
-                scanY += scanDir*.9; if (scanY > canvas.height || scanY < 0) scanDir *= -1;
-                const sg = ctx.createLinearGradient(0, scanY-55, 0, scanY+55);
-                sg.addColorStop(0,'transparent'); sg.addColorStop(.5,'rgba(255,255,255,0.025)'); sg.addColorStop(1,'transparent');
-                ctx.fillStyle = sg; ctx.fillRect(0, scanY-55, canvas.width, 110);
-                ctx.save(); ctx.strokeStyle = 'rgba(200,210,225,0.09)'; ctx.lineWidth = 1; ctx.setLineDash([5,14]);
-                ctx.beginPath(); ctx.moveTo(0, scanY); ctx.lineTo(canvas.width, scanY); ctx.stroke(); ctx.restore();
-            }
-
-            let racks, traces, icons, matrix;
-            function rebuildScene() {
-                const rs = Math.max(42, Math.min(58, canvas.width*.044));
-                const rn = Math.max(2, Math.floor(canvas.width*.08 / rs));
-                racks = [];
-                for (let i = 0; i < rn; i++) racks.push(new ServerRack(rs/2 + i*rs, 'left'));
-                for (let i = 0; i < rn; i++) racks.push(new ServerRack(canvas.width - rs/2 - i*rs, 'right'));
-                traces = Array.from({length: Math.min(35, Math.floor(canvas.width/22))}, () => new CircuitTrace());
-                icons  = Array.from({length: 6}, (_, i) => new SecurityIcon(i*40));
-                matrix = Array.from({length: Math.min(40, Math.floor(canvas.width/20))}, (_, i) => new MatrixCol(true));
-            }
-            rebuildScene();
-
-            function animate() {
-                ctx.fillStyle = 'rgba(3,5,14,0.13)'; ctx.fillRect(0, 0, canvas.width, canvas.height);
-                drawCeiling(); drawFloor();
-                matrix.forEach(m => { m.update(); m.draw(); });
-                traces.forEach(c => { c.update(); c.draw(); });
-                drawScan();
-                racks.forEach(r => r.draw());
-                icons.forEach(ic => { ic.update(); ic.draw(); });
-                requestAnimationFrame(animate);
-            }
-            requestAnimationFrame(animate);
-        }
-
-
-        // Particle animation
-        function initParticles() {
-            const container = document.querySelector('.particle-container');
-            if (!container) return;
-
-            const particles = [];
-            const particleCount = Math.min(30, Math.floor(window.innerWidth / 200));
-
-            class Particle {
-                constructor() {
-                    this.x = Math.random() * window.innerWidth;
-                    this.y = Math.random() * window.innerHeight * 0.5;
-                    this.vx = (Math.random() - 0.5) * 2;
-                    this.vy = Math.random() * 1 + 0.5;
-                    this.radius = Math.random() * 1.5 + 0.5;
-                    this.element = document.createElement('div');
-                    this.element.className = 'particle';
-                    this.element.style.width = this.radius * 2 + 'px';
-                    this.element.style.height = this.radius * 2 + 'px';
-                    this.element.style.opacity = Math.random() * 0.5 + 0.3;
-                    container.appendChild(this.element);
-                }
-
-                update() {
-                    this.x += this.vx;
-                    this.y += this.vy;
-
-                    if (this.x < 0 || this.x > window.innerWidth) this.vx *= -1;
-                    if (this.y < 0 || this.y > window.innerHeight * 0.7) this.vy *= -0.8;
-
-                    this.element.style.left = this.x + 'px';
-                    this.element.style.top = this.y + 'px';
-                }
-            }
-
-            for (let i = 0; i < particleCount; i++) {
-                particles.push(new Particle());
-            }
-
-            function animate() {
-                particles.forEach(p => p.update());
-                requestAnimationFrame(animate);
-            }
-
-            animate();
-        }
-
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gnanapiragasam Tharaniraj — Senior Network & Infrastructure Engineer</title>
+<meta name="description" content="Senior Data Centre & Network Engineer with 5+ years designing enterprise networks, VXLAN/EVPN fabrics, hybrid cloud, and security infrastructure.">
+<meta name="author" content="Gnanapiragasam Tharaniraj">
+<meta name="keywords" content="Network Engineer, Data Centre, VXLAN, EVPN, SD-WAN, Python Automation, Cisco, Fortinet, Sri Lanka">
+<link rel="canonical" href="https://tharaniraj.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tharaniraj.github.io/">
+<meta property="og:title" content="Gnanapiragasam Tharaniraj — Senior Network Engineer">
+<meta property="og:description" content="5+ years designing enterprise networks, VXLAN/EVPN fabrics, hybrid cloud connectivity, and zero-trust security architectures.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Gnanapiragasam Tharaniraj","jobTitle":"Senior Network & Infrastructure Engineer","url":"https://tharaniraj.github.io/","email":"sgtharaniraj@gmail.com","sameAs":["https://linkedin.com/in/sgtharaniraj","https://github.com/Tharaniraj"]}
+
+/* ── Glow effect on cards ────────── */
+document.querySelectorAll('.proj-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+    card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+  });
+});
+
+</script>
+<style>
+:root {
+  --bg-color: #050505;
+  --text-main: rgba(255,255,255,0.85);
+  --text-muted: rgba(255,255,255,0.55);
+  --accent: #10b981; 
+  --accent-glow: rgba(16, 185, 129, 0.4);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-hover-bg: rgba(255, 255, 255, 0.06);
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+html, body { max-width:100%; overflow-x:hidden; background: var(--bg-color); color: var(--text-main); font-family: var(--font-body); line-height: 1.6; font-weight: 300; }
+
+.mesh-bg {
+  position: fixed; inset: 0; z-index: -2;
+  background-image: radial-gradient(circle at 15% 50%, rgba(16, 185, 129, 0.1), transparent 40%), radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.1), transparent 40%);
+  filter: blur(60px); pointer-events: none;
+}
+.mesh-bg::after {
+  content:''; position:fixed; inset:0;
+  background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+  opacity: 0.04; z-index: -1; pointer-events:none;
+}
+#bg-canvas { position:fixed; inset:0; z-index:-1; pointer-events:none; opacity: 0.6; }
+
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify-content:space-between; align-items:center;
+  padding:1.5rem 3rem; transition:all .4s ease; border-bottom: 1px solid transparent;
+}
+nav.scrolled { background: rgba(5,5,5,0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--glass-border); padding: 1rem 3rem; }
+.nav-logo { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; letter-spacing: 0.05em; color: #fff; }
+.nav-links { display:flex; gap:2.5rem; list-style:none; }
+.nav-links a { font-family: var(--font-body); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; color: var(--text-muted); text-decoration:none; transition:color .3s; position: relative; }
+.nav-links a::after { content: ''; position: absolute; left: 0; bottom: -4px; width: 0%; height: 2px; background: var(--accent); transition: width 0.3s ease; border-radius: 2px; }
+.nav-links a:hover { color: #fff; }
+.nav-links a:hover::after { width: 100%; }
+.hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
+.hamburger span { display:block; width:24px; height:2px; background:#fff; transition:.3s; border-radius:1px; }
+
+section { position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:8rem 3rem; }
+.section-label { font-family: var(--font-heading); font-size: 0.85rem; letter-spacing: 0.2em; text-transform:uppercase; font-weight: 600; color: var(--accent); margin-bottom:4rem; display:flex; align-items:center; gap:1.5rem; }
+.section-label::after { content:''; flex:1; max-width:100px; height:2px; background: linear-gradient(90deg, var(--accent) 0%, transparent 100%); border-radius: 2px; }
+
+.hero { min-height: 100vh; display:flex; flex-direction:column; justify-content:center; padding: 0 3rem; position:relative; z-index:1; }
+.hero::before { content:''; position:absolute; top:30%; left:20%; width:40vw; height:40vw; background: radial-gradient(circle, rgba(16,185,129,0.1) 0%, transparent 70%); filter: blur(80px); z-index:-1; pointer-events:none; }
+.hero-eyebrow { display: inline-flex; align-items:center; gap:0.75rem; font-family: var(--font-body); font-size: 0.85rem; font-weight: 500; color: var(--accent); margin-bottom: 2rem; padding: 0.5rem 1rem; border-radius: 100px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); width: fit-content; }
+.hero-dot { width:8px; height:8px; border-radius:50%; background:var(--accent); box-shadow:0 0 12px var(--accent); animation:pulse-dot 2s infinite; }
+@keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.8)} }
+.hero-name { font-family: var(--font-heading); font-size: clamp(3.5rem, 8vw, 6.5rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: #fff; margin-bottom: 1.5rem; background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.7) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-name span { display:block; }
+.hero-bottom { display:flex; justify-content:space-between; align-items:flex-end; gap:2rem; flex-wrap:wrap; }
+.hero-role { font-size: 1.1rem; color: var(--text-muted); max-width: 500px; line-height: 1.6; }
+.hero-actions { display:flex; gap:1.25rem; flex-wrap:wrap; margin-top: 1rem;}
+.btn-primary, .btn-secondary { font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; text-decoration:none; cursor:pointer; padding: 0.85rem 2rem; border-radius: 8px; transition:all .3s ease; display:inline-flex; align-items:center; justify-content:center; }
+.btn-primary { background: var(--accent); color: #000; box-shadow: 0 0 20px rgba(16, 185, 129, 0.2); }
+.btn-primary:hover { background: #0ea5e9; color: #fff; box-shadow: 0 0 25px rgba(14, 165, 233, 0.4); transform: translateY(-2px); }
+.btn-secondary { background: var(--glass-bg); color: #fff; border: 1px solid var(--glass-border); backdrop-filter: blur(10px); }
+.btn-secondary:hover { background: var(--glass-hover-bg); border-color: rgba(255,255,255,0.2); transform: translateY(-2px); }
+
+.scroll-arrow { position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:0.5rem; color: var(--text-muted); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; animation:bob 2.5s ease-in-out infinite; text-decoration: none; }
+.scroll-arrow svg { width:18px; opacity:0.8; }
+@keyframes bob { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+
+.hr { border:none; border-top:1px solid var(--glass-border); max-width:1200px; margin: 0 auto; }
+
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:start; }
+.about-quote { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 600; color: #fff; line-height: 1.3; }
+.about-text { font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); }
+.about-text p + p { margin-top: 1.5rem; }
+.stats-row { display:grid; grid-template-columns:repeat(2,1fr); gap:2rem; margin-top:3rem; padding-top:3rem; border-top:1px solid var(--glass-border); }
+.stat-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; padding: 1.5rem; text-align: center; backdrop-filter: blur(10px); transition: transform 0.3s ease; }
+.stat-item:hover { transform: translateY(-5px); border-color: rgba(16,185,129,0.3); }
+.stat-n { font-family: var(--font-heading); font-size: 3rem; font-weight: 700; color: #fff; line-height: 1; margin-bottom: 0.5rem; }
+.stat-l { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+
+.skills-list { display:flex; flex-direction:column; gap:1rem; }
+.skill-row { display:grid; grid-template-columns:220px 1fr 100px; align-items:center; gap:3rem; padding: 1.5rem 2rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; backdrop-filter: blur(10px); transition: all .3s ease; }
+.skill-row:hover { background: var(--glass-hover-bg); border-color: rgba(16,185,129,0.2); transform: translateX(10px); box-shadow: -10px 0 20px rgba(16,185,129,0.05); }
+.skill-name { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; color: #fff; }
+.skill-tags { display:flex; flex-wrap:wrap; gap:0.5rem; }
+.stag { font-size: 0.8rem; color: var(--text-main); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 0.35rem 0.8rem; border-radius: 100px; transition: .3s; }
+.skill-row:hover .stag { border-color: rgba(16,185,129,0.3); color: #fff; }
+.skill-lvl { font-size: 0.8rem; letter-spacing: 0.1em; text-transform:uppercase; font-weight: 600; color: var(--accent); text-align:right; }
+
+.exp-list { display:flex; flex-direction:column; gap:2rem; position: relative; }
+.exp-list::before { content: ''; position: absolute; left: 180px; top: 0; bottom: 0; width: 1px; background: linear-gradient(180deg, var(--accent) 0%, rgba(255,255,255,0.1) 100%); }
+.exp-item { display:grid; grid-template-columns:160px 1fr; gap:3.5rem; position: relative; }
+.exp-date { font-family: var(--font-heading); font-size: 0.95rem; font-weight: 500; color: var(--text-muted); padding-top: 0.5rem; text-align: right; line-height: 1.4; }
+.exp-content { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; padding: 2.5rem; backdrop-filter: blur(10px); transition: all 0.3s ease; position: relative; }
+.exp-content::before { content: ''; position: absolute; left: -3.5rem; top: 1.5rem; width: 14px; height: 14px; background: var(--bg-color); border: 2px solid var(--accent); border-radius: 50%; box-shadow: 0 0 10px var(--accent); z-index: 2; }
+.exp-content:hover { border-color: rgba(16,185,129,0.3); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.exp-title { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 600; color: #fff; margin-bottom: 0.25rem; }
+.exp-company { font-size: 0.95rem; font-weight: 500; color: var(--accent); margin-bottom: 1.5rem; }
+.exp-bullets { list-style:none; display:flex; flex-direction:column; gap:0.75rem; }
+.exp-bullets li { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; padding-left: 1.5rem; position: relative; }
+.exp-bullets li::before { content:'▹'; position:absolute; left:0; color: var(--accent); font-size: 1.1rem; }
+
+.proj-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; }
+.proj-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; transition: all .3s ease; display: flex; flex-direction: column; backdrop-filter: blur(10px); position: relative; overflow: hidden; }
+.proj-card::before { content:''; position:absolute; top:0; left:0; width:100%; height:100%; background: radial-gradient(400px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(16,185,129,0.1), transparent 40%); z-index: 0; pointer-events: none; opacity: 0; transition: opacity 0.5s; }
+.proj-card:hover::before { opacity: 1; }
+.proj-card:hover { transform: translateY(-10px); border-color: rgba(16,185,129,0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+.proj-card > * { position: relative; z-index: 1; }
+.proj-type { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform:uppercase; color: var(--text-muted); margin-bottom: 1.25rem; display:flex; align-items:center; gap:0.75rem; }
+.proj-dot { width:8px; height:8px; border-radius:50%; box-shadow: 0 0 8px currentColor; }
+.dot-prod { background: #10b981; color: #10b981; }
+.dot-lab  { background: #3b82f6; color: #3b82f6; }
+.dot-tool { background: #f59e0b; color: #f59e0b; }
+.proj-title { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 600; color: #fff; margin-bottom: 1rem; line-height: 1.3; }
+.proj-desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1; }
+.proj-detail { font-size: 0.9rem; color: var(--text-main); line-height: 1.6; margin-bottom: 1rem; background: rgba(0,0,0,0.2); padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); }
+.proj-detail strong { display:block; font-size: 0.75rem; letter-spacing: 0.1em; text-transform:uppercase; color: var(--accent); font-weight: 600; margin-bottom: 0.25rem; }
+.proj-tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top: 1rem; margin-bottom: 1.5rem; }
+.ptag { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; color: var(--text-main); background: rgba(255,255,255,0.05); padding: 0.3rem 0.75rem; border-radius: 100px; }
+.proj-outcomes { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.05); }
+.outc { font-size: 0.75rem; font-weight: 600; color: #fff; background: rgba(16,185,129,0.15); padding: 0.3rem 0.6rem; border-radius: 4px; }
+.proj-link { display:inline-block; font-size: 0.85rem; font-weight: 500; color: #fff; margin-top: 1rem; text-decoration: none; transition: .3s; }
+.proj-link:hover { color: var(--accent); text-decoration: underline; }
+
+.cert-list { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+.cert-row { display:flex; align-items:center; justify-content:space-between; gap:1.5rem; padding: 1.5rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; transition: .3s; }
+.cert-row:hover { background: var(--glass-hover-bg); border-color: rgba(16,185,129,0.3); transform: translateY(-3px); }
+.cert-name-text { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 0.25rem;}
+.cert-issuer-text { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+.cert-badge { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.05em; text-transform:uppercase; padding: 0.4rem 0.8rem; border-radius: 100px; white-space:nowrap; }
+.cert-badge.active { color: #10b981; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); }
+.cert-badge.progress { color: #f59e0b; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2); }
+
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:start; }
+.contact-intro { font-family: var(--font-heading); font-size: clamp(2rem, 3.5vw, 2.5rem); font-weight: 600; color: #fff; line-height: 1.3; margin-bottom: 3rem; }
+.contact-links { display:flex; flex-direction:column; gap:1rem; }
+.contact-link-row { display:flex; align-items:center; gap:1.5rem; padding: 1.25rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; transition: .3s; }
+.contact-link-row:hover { transform: translateX(10px); border-color: rgba(16,185,129,0.3); background: var(--glass-hover-bg); }
+.contact-link-label { font-size: 0.75rem; font-weight: 600; text-transform:uppercase; color: var(--text-muted); display: block; margin-bottom: 0.2rem;}
+.contact-link-row a, .contact-link-row span.val { font-family: var(--font-body); font-size: 1rem; font-weight: 500; color: #fff; text-decoration:none; }
+.form-wrap { background: var(--glass-bg); padding: 3rem; border-radius: 16px; border: 1px solid var(--glass-border); backdrop-filter: blur(10px); }
+.form-field { display:flex; flex-direction:column; gap:0.5rem; margin-bottom:1.5rem; }
+.form-field label { font-size: 0.85rem; font-weight: 500; color: #fff; }
+.form-field input, .form-field textarea { background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); border-radius: 8px; padding: 1rem; color: #fff; font-family: var(--font-body); font-size: 1rem; outline:none; resize:none; transition: all .3s; }
+.form-field input:focus, .form-field textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(16,185,129,0.1); background: rgba(0,0,0,0.5); }
+.form-field textarea { height:120px; }
+.btn-send { text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em; font-family: var(--font-body); font-size: 0.85rem; padding: 1rem; width: 100%; border: none; background: var(--accent); color: #000; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+.btn-send:hover { background: #0ea5e9; transform: translateY(-2px); }
+
+footer { position:relative; z-index:1; border-top:1px solid var(--glass-border); background: rgba(0,0,0,0.3); padding: 3rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:2rem; }
+.footer-name { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; color: #fff; }
+.footer-copy { font-size: 0.9rem; color: var(--text-muted); }
+.footer-socials { display:flex; gap:1.25rem; }
+.footer-socials a { font-size: 0.85rem; font-weight: 500; color: var(--text-muted); text-decoration:none; transition: .3s; }
+.footer-socials a:hover { color: var(--accent); }
+
+.reveal { opacity:0; transform:translateY(40px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.reveal.visible { opacity:1; transform:none; }
+
+@media (max-width:992px) {
+  .about-grid, .contact-grid { grid-template-columns:1fr; gap:4rem; }
+  .exp-list::before { left: 0; }
+  .exp-item { grid-template-columns:1fr; gap:1.5rem; }
+  .exp-date { text-align: left; padding-left: 1.5rem; position: relative; }
+  .exp-date::before { content:''; position:absolute; left:-4px; top:12px; width:9px; height:9px; background:var(--bg-color); border:2px solid var(--accent); border-radius:50%; z-index:2; }
+  .exp-content::before { display: none; }
+}
+@media (max-width:768px) {
+  nav { padding:1rem 1.5rem; }
+  .nav-links { display:none; }
+  .hamburger { display:flex; }
+  .nav-links.open { display:flex; flex-direction:column; gap:2rem; position:fixed; top:0; left:0; right:0; bottom:0; background: rgba(5,5,5,0.98); backdrop-filter: blur(15px); justify-content:center; align-items:center; z-index:99; }
+  .nav-links.open a { font-size: 1.5rem; font-weight: 600; }
+  .hero { padding: 0 1.5rem; }
+  .hero-name { font-size: clamp(2.5rem, 12vw, 4rem); }
+  .hero-bottom { flex-direction:column; align-items:flex-start; gap: 1rem; }
+  section { padding:6rem 1.5rem; }
+  .skill-row { grid-template-columns:1fr; gap:1rem; padding: 1.5rem; text-align: center; justify-items: center; }
+  .skill-lvl { text-align:center; }
+  .skill-tags { justify-content: center; }
+  .stats-row { grid-template-columns:repeat(2,1fr); gap: 1rem; }
+  .form-wrap { padding: 1.5rem; }
+  footer { flex-direction:column; align-items:center; text-align: center; padding:3rem 1.5rem; }
+}
+@media (max-width:480px) {
+  .hero-name { font-size: clamp(2.2rem, 13vw, 3rem); }
+  .stats-row { grid-template-columns:1fr; }
+  .cert-list { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
-    <div class="geometric-bg">
-        <div class="shape shape1"></div>
-        <div class="shape shape2"></div>
-        <div class="shape shape3"></div>
+
+<div class="mesh-bg"></div>
+
+<!-- Small particle canvas -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- Nav -->
+<nav id="nav">
+  <div class="nav-logo">G. Tharaniraj</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" onclick="closeNav()">About</a></li>
+    <li><a href="#skills" onclick="closeNav()">Skills</a></li>
+    <li><a href="#experience" onclick="closeNav()">Experience</a></li>
+    <li><a href="#projects" onclick="closeNav()">Projects</a></li>
+    <li><a href="#certifications" onclick="closeNav()">Certs</a></li>
+    <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-eyebrow">
+    <span class="hero-dot"></span>
+    Available — Network · Cloud · Data Centre Roles
+  </div>
+  <h1 class="hero-name">
+    <span>Gnanapiragasam</span>
+    <span>Tharaniraj</span>
+  </h1>
+  <div class="hero-bottom">
+    <p class="hero-role">
+      Senior Network &amp; Infrastructure Engineer<br>
+      CCNP · VXLAN/EVPN · Hybrid Cloud · Python Automation<br>
+      Colombo, Sri Lanka — Open to Relocation
+    </p>
+    <div class="hero-actions">
+      <a href="cv.pdf" download="Tharaniraj_Gnanapiragasam_CV.pdf" class="btn-primary">Download CV</a>
+      <a href="#projects" class="btn-secondary">View Projects ↓</a>
+    </div>
+  </div>
+  <div class="scroll-arrow">
+    <svg viewBox="0 0 12 18" fill="none" stroke="currentColor" stroke-width="1">
+      <path d="M6 1v16M1 12l5 5 5-5"/>
+    </svg>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- About -->
+<section id="about">
+  <div class="section-label">About</div>
+  <div class="about-grid reveal">
+    <div class="about-quote">
+      Building secure, scalable infrastructure — from legacy to SDN — across banking and telecommunications.
+    </div>
+    <div>
+      <div class="about-text">
+        <p>Senior Data Centre and Network Engineer with 5+ years of experience designing and deploying enterprise-grade infrastructure for major financial institutions and telecommunications providers. I specialise in VXLAN/EVPN fabric design, hybrid cloud connectivity, and zero-trust security architectures.</p>
+        <p>My expertise spans network automation (Python, Ansible), cloud connectivity (AWS Direct Connect, OCI FastConnect), and enterprise security (Palo Alto, Fortinet). Currently leading network and infrastructure security at Commercial Bank of Ceylon — Sri Lanka's largest private bank.</p>
+      </div>
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-n">5+</div>
+          <div class="stat-l">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-n">300+</div>
+          <div class="stat-l">Branches Managed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-n">99.9%</div>
+          <div class="stat-l">SLA Uptime</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-n">800+</div>
+          <div class="stat-l">Nodes Monitored</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- Skills -->
+<section id="skills">
+  <div class="section-label">Core Expertise</div>
+  <div class="skills-list reveal">
+    <div class="skill-row">
+      <div class="skill-name">Data Centre</div>
+      <div class="skill-tags">
+        <span class="stag">VXLAN / EVPN</span>
+        <span class="stag">Spine-Leaf CLOS</span>
+        <span class="stag">Cisco Nexus NX-OS</span>
+        <span class="stag">BGP EVPN</span>
+        <span class="stag">F5 LTM / GTM</span>
+        <span class="stag">Anycast Gateway</span>
+        <span class="stag">Arista EOS</span>
+      </div>
+      <div class="skill-lvl">Expert</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-name">Routing &amp; Switching</div>
+      <div class="skill-tags">
+        <span class="stag">BGP / OSPF / IS-IS</span>
+        <span class="stag">MPLS / RSVP-TE</span>
+        <span class="stag">IPv4 / IPv6</span>
+        <span class="stag">HSRP / VRRP / BFD</span>
+        <span class="stag">QoS DSCP</span>
+        <span class="stag">STP / RSTP / MST</span>
+      </div>
+      <div class="skill-lvl">Expert</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-name">SD-WAN &amp; WAN</div>
+      <div class="skill-tags">
+        <span class="stag">Fortinet SD-WAN</span>
+        <span class="stag">ADVPN</span>
+        <span class="stag">IPSec VPN</span>
+        <span class="stag">DMVPN</span>
+        <span class="stag">GRE Tunnels</span>
+        <span class="stag">SSL VPN</span>
+        <span class="stag">MPLS L3VPN</span>
+      </div>
+      <div class="skill-lvl">Advanced</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-name">Cloud &amp; Hybrid</div>
+      <div class="skill-tags">
+        <span class="stag">AWS Direct Connect</span>
+        <span class="stag">AWS Transit Gateway</span>
+        <span class="stag">OCI FastConnect</span>
+        <span class="stag">Azure ExpressRoute</span>
+        <span class="stag">Huawei CloudFabric</span>
+        <span class="stag">VPC Design</span>
+      </div>
+      <div class="skill-lvl">Proficient</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-name">Security</div>
+      <div class="skill-tags">
+        <span class="stag">Palo Alto NGFW</span>
+        <span class="stag">Fortinet FortiGate NSE4</span>
+        <span class="stag">Zero-Trust Architecture</span>
+        <span class="stag">802.1x NAC</span>
+        <span class="stag">PCI DSS</span>
+        <span class="stag">ISO 27001</span>
+        <span class="stag">WAF / IPS</span>
+      </div>
+      <div class="skill-lvl">Advanced</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-name">Automation</div>
+      <div class="skill-tags">
+        <span class="stag">Python 3</span>
+        <span class="stag">Netmiko</span>
+        <span class="stag">Nornir</span>
+        <span class="stag">Ansible</span>
+        <span class="stag">Jinja2</span>
+        <span class="stag">Git / GitOps</span>
+        <span class="stag">Bash</span>
+      </div>
+      <div class="skill-lvl">Advanced</div>
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- Experience -->
+<section id="experience">
+  <div class="section-label">Experience</div>
+  <div class="exp-list">
+
+    <div class="exp-item reveal">
+      <div class="exp-date">Aug 2024<br>Present</div>
+      <div class="exp-content">
+        <div class="exp-title">Lead Engineer — Network &amp; Infrastructure Security</div>
+        <div class="exp-company">Commercial Bank of Ceylon PLC</div>
+        <ul class="exp-bullets">
+          <li>Designed SDN spine-leaf VXLAN/EVPN DC fabric for HQ + DR sites</li>
+          <li>Implemented AWS Direct Connect + OCI FastConnect hybrid cloud connectivity</li>
+          <li>Led Python/Ansible automation reducing provisioning time by 40%</li>
+          <li>Deployed Palo Alto + Fortinet NGFW with Zero-Trust and PCI DSS compliance</li>
+          <li>Managed 200+ branches LAN/WAN with BGP, OSPF, MPLS, HSRP/VRRP</li>
+          <li>Configured F5 LTM/GTM load balancing, WAF, IPS/IDS, 802.1x NAC</li>
+        </ul>
+      </div>
     </div>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="nav-logo">GT</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certs</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <div class="exp-item reveal">
+      <div class="exp-date">Jan 2023<br>Jul 2024</div>
+      <div class="exp-content">
+        <div class="exp-title">Network Engineer — TAC / DE DevOps</div>
+        <div class="exp-company">Dialog Axiata PLC — Sri Lanka's Largest Telco</div>
+        <ul class="exp-bullets">
+          <li>Managed 800+ enterprise corporate nodes with BGP, MPLS, OSPF</li>
+          <li>Deployed Fortinet SD-WAN for 10+ enterprise clients across 300+ branches</li>
+          <li>Reduced MTTR by 35% while maintaining 99.9%+ SLA</li>
+          <li>Developed Python automation scripts reducing manual provisioning by 40%</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-date">Jun 2022<br>Dec 2022</div>
+      <div class="exp-content">
+        <div class="exp-title">Network Engineer — Enterprise Infrastructure</div>
+        <div class="exp-company">SevenX Lanka — TATA Communications Partner</div>
+        <ul class="exp-bullets">
+          <li>Deployed enterprise routers, switches, and NGFW across multi-vendor environments</li>
+          <li>Configured Fortinet FortiGate, Cisco, Huawei devices</li>
+          <li>Managed BGP, OSPF, SD-WAN overlays and LLD documentation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-date">Feb 2021<br>May 2022</div>
+      <div class="exp-content">
+        <div class="exp-title">Assistant Network Engineer — Infrastructure &amp; Systems</div>
+        <div class="exp-company">Hayleys Fentons Ltd</div>
+        <ul class="exp-bullets">
+          <li>Executed end-to-end enterprise network infrastructure projects</li>
+          <li>Deployed FortiGate, Cisco Catalyst switches, wireless APs</li>
+          <li>Managed structured cabling (CAT6, fibre), IP-PABX, CCTV, ACS</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- Projects -->
+<section id="projects">
+  <div class="section-label">Featured Projects</div>
+  <div class="proj-grid">
+
+    <div class="proj-card reveal">
+      <div class="proj-type"><span class="proj-dot dot-prod"></span>Production · Featured</div>
+      <div class="proj-title">SDN Data Centre Fabric</div>
+      <div class="proj-desc">Modernised a legacy STP-based DC into a scalable multi-tenant VXLAN/EVPN CLOS fabric across HQ &amp; DR sites.</div>
+      <div class="proj-detail"><strong>Problem</strong>Legacy STP/MSTP fabric caused slow convergence (30–60s), broadcast storms, and couldn't support multi-tenancy.</div>
+      <div class="proj-detail"><strong>Solution</strong>2-tier Spine-Leaf CLOS on Cisco Nexus NX-OS with BGP EVPN control plane, distributed anycast gateways, and ARP suppression.</div>
+      <div class="proj-tags">
+        <span class="ptag">Cisco Nexus NX-OS</span>
+        <span class="ptag">VXLAN / EVPN</span>
+        <span class="ptag">BGP EVPN</span>
+        <span class="ptag">Spine-Leaf</span>
+        <span class="ptag">Anycast GW</span>
+      </div>
+      <div class="proj-outcomes">
+        <span class="outc">Sub-second failover</span>
+        <span class="outc">99.99% uptime</span>
+        <span class="outc">Full multi-tenancy</span>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-type"><span class="proj-dot dot-prod"></span>Production · Featured</div>
+      <div class="proj-title">Hybrid DC-Cloud Connectivity</div>
+      <div class="proj-desc">Private dedicated multi-cloud connectivity for a Tier-1 bank via AWS &amp; OCI with automatic BGP failover.</div>
+      <div class="proj-detail"><strong>Problem</strong>Banking applications required private, low-latency connectivity. Public internet paths failed PCI DSS compliance.</div>
+      <div class="proj-detail"><strong>Solution</strong>AWS Direct Connect with Transit Gateway, OCI FastConnect for Oracle Banking Core, Azure ExpressRoute as tertiary path with BGP MED/AS-path failover.</div>
+      <div class="proj-tags">
+        <span class="ptag">AWS Direct Connect</span>
+        <span class="ptag">OCI FastConnect</span>
+        <span class="ptag">BGP Policy</span>
+        <span class="ptag">Azure ExpressRoute</span>
+      </div>
+      <div class="proj-outcomes">
+        <span class="outc">Sub-10ms latency</span>
+        <span class="outc">PCI DSS compliant</span>
+        <span class="outc">Auto BGP failover</span>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-type"><span class="proj-dot dot-lab"></span>Lab / Research</div>
+      <div class="proj-title">VXLAN/EVPN Underlay-Overlay Lab</div>
+      <div class="proj-desc">Full CLOS fabric simulation — OSPF underlay, BGP EVPN overlay, symmetric IRB, ARP suppression — built in EVE-NG.</div>
+      <div class="proj-detail"><strong>Solution</strong>2-spine 4-leaf topology using Cisco NX-OS and Arista vEOS. OSPF + BFD underlay, BGP EVPN control plane, L2/L3 VNI with symmetric IRB and ECMP.</div>
+      <div class="proj-tags">
+        <span class="ptag">EVE-NG</span>
+        <span class="ptag">Cisco NX-OS</span>
+        <span class="ptag">Arista vEOS</span>
+        <span class="ptag">Symmetric IRB</span>
+        <span class="ptag">BFD</span>
+      </div>
+      <div class="proj-outcomes">
+        <span class="outc">ARP suppression validated</span>
+        <span class="outc">ECMP 4 paths</span>
+      </div>
+      <a href="https://github.com/Tharaniraj" class="proj-link" target="_blank">GitHub →</a>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-type"><span class="proj-dot dot-tool"></span>Automation</div>
+      <div class="proj-title">Network Automation Pipeline</div>
+      <div class="proj-desc">Infrastructure-as-Code pipeline for zero-touch provisioning across 200+ multi-vendor branch devices.</div>
+      <div class="proj-detail"><strong>Solution</strong>Python + Netmiko/Nornir with Jinja2 templating for multi-vendor config generation. Ansible orchestration + Git version-controlled config storage.</div>
+      <div class="proj-tags">
+        <span class="ptag">Python 3</span>
+        <span class="ptag">Netmiko</span>
+        <span class="ptag">Nornir</span>
+        <span class="ptag">Ansible</span>
+        <span class="ptag">Jinja2</span>
+        <span class="ptag">Git</span>
+      </div>
+      <div class="proj-outcomes">
+        <span class="outc">40% faster provisioning</span>
+        <span class="outc">200+ devices</span>
+        <span class="outc">Zero drift</span>
+      </div>
+      <a href="https://github.com/Tharaniraj" class="proj-link" target="_blank">GitHub →</a>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-type"><span class="proj-dot dot-tool"></span>Tool</div>
+      <div class="proj-title">Python IPAM Tool</div>
+      <div class="proj-desc">Custom IP Address Management desktop app with GUI, subnet calculator, conflict detection, and audit exports.</div>
+      <div class="proj-detail"><strong>Solution</strong>Desktop IPAM in Python using Tkinter + SQLite. CIDR subnet calculator, real-time IP search, duplicate detection, CSV/JSON export for compliance audits.</div>
+      <div class="proj-tags">
+        <span class="ptag">Python 3</span>
+        <span class="ptag">Tkinter</span>
+        <span class="ptag">SQLite</span>
+        <span class="ptag">ipaddress</span>
+        <span class="ptag">CSV export</span>
+      </div>
+      <div class="proj-outcomes">
+        <span class="outc">100k+ IP records</span>
+        <span class="outc">Audit-ready</span>
+      </div>
+      <a href="https://github.com/Tharaniraj" class="proj-link" target="_blank">GitHub →</a>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-type"><span class="proj-dot dot-prod"></span>Production</div>
+      <div class="proj-title">Enterprise SD-WAN Rollout</div>
+      <div class="proj-desc">Multi-country Fortinet SD-WAN deployment for 10+ enterprise clients across 300+ branches with zero service disruption.</div>
+      <div class="proj-detail"><strong>Solution</strong>Fortinet SD-WAN with ADVPN hub-and-spoke, dual-ISP with application SLA steering, and phased MPLS-to-SD-WAN migration with live traffic validation.</div>
+      <div class="proj-tags">
+        <span class="ptag">Fortinet SD-WAN</span>
+        <span class="ptag">ADVPN</span>
+        <span class="ptag">IPSec VPN</span>
+        <span class="ptag">App-Aware Routing</span>
+        <span class="ptag">Dual-ISP HA</span>
+      </div>
+      <div class="proj-outcomes">
+        <span class="outc">300+ branches</span>
+        <span class="outc">MTTR −35%</span>
+        <span class="outc">Zero downtime</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- Certifications -->
+<section id="certifications">
+  <div class="section-label">Certifications &amp; Education</div>
+  <div class="cert-list reveal">
+    <div class="cert-row">
+      <div><div class="cert-name-text">CCNP Enterprise</div><div class="cert-issuer-text">Cisco</div></div>
+      <span class="cert-badge active">Current</span>
+    </div>
+    <div class="cert-row">
+      <div><div class="cert-name-text">CEH v13</div><div class="cert-issuer-text">EC-Council</div></div>
+      <span class="cert-badge active">Valid</span>
+    </div>
+    <div class="cert-row">
+      <div><div class="cert-name-text">Fortinet NSE 1 – 4</div><div class="cert-issuer-text">Fortinet</div></div>
+      <span class="cert-badge active">Valid</span>
+    </div>
+    <div class="cert-row">
+      <div><div class="cert-name-text">CCNA — Routing &amp; Switching</div><div class="cert-issuer-text">Cisco</div></div>
+      <span class="cert-badge active">Valid</span>
+    </div>
+    <div class="cert-row">
+      <div><div class="cert-name-text">CCNP SPCOR 350-501</div><div class="cert-issuer-text">Cisco</div></div>
+      <span class="cert-badge progress">In Progress</span>
+    </div>
+    <div class="cert-row">
+      <div><div class="cert-name-text">AWS Certified Cloud Practitioner</div><div class="cert-issuer-text">Amazon Web Services</div></div>
+      <span class="cert-badge progress">Pursuing</span>
+    </div>
+    <div class="cert-row">
+      <div><div class="cert-name-text">BSc (Hons) Electrical &amp; Electronic Engineering</div><div class="cert-issuer-text">SLIIT — 2017–2020</div></div>
+      <span class="cert-badge active">Graduated</span>
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- Contact -->
+<section id="contact">
+  <div class="section-label">Contact</div>
+  <div class="contact-grid">
+    <div class="reveal">
+      <div class="contact-intro">
+        Interested in working together? Let's talk.
+      </div>
+      <div class="contact-links">
+        <div class="contact-link-row">
+          <span class="contact-link-label">Email</span>
+          <a href="mailto:sgtharaniraj@gmail.com">sgtharaniraj@gmail.com</a>
         </div>
-    </nav>
-
-    <!-- Full-page background canvas -->
-    <canvas class="hero-bg-canvas"></canvas>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="particle-container"></div>
-        
-        <div class="hero-content">
-            <div class="availability-badge">
-                <span class="availability-dot"></span>
-                Open to Work — Network · Cloud · Data Centre Roles
-            </div>
-            <h1 class="hero-name">Gnanapiragasam<br>Tharaniraj</h1>
-            <div class="hero-title"></div>
-            <p class="hero-subtitle">CCNP-level · VXLAN/EVPN &amp; CLOS Fabrics · Hybrid Cloud Connectivity · Python Automation</p>
-
-            <div class="location-badge">📍 Colombo, Sri Lanka | Open to Relocation</div>
-
-            <div class="hero-buttons">
-                <a href="cv.pdf" download="Tharaniraj_Gnanapiragasam_CV.pdf" class="btn btn-primary">📥 Download CV</a>
-                <a href="#projects" class="btn btn-secondary">View Projects →</a>
-                <a href="#contact" class="btn btn-outline">Contact Me</a>
-            </div>
+        <div class="contact-link-row">
+          <span class="contact-link-label">Phone</span>
+          <a href="tel:+94777339218">+94 777 339 218</a>
         </div>
-
-        <div class="scroll-indicator">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 10L12 15L17 10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M7 16L12 21L17 16" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+        <div class="contact-link-row">
+          <span class="contact-link-label">LinkedIn</span>
+          <a href="https://linkedin.com/in/sgtharaniraj" target="_blank">linkedin.com/in/sgtharaniraj</a>
         </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <h2 class="section-title">About Me</h2>
-        
-        <div class="about-container fade-in">
-            <div class="about-image">
-                <div class="avatar-placeholder">🌐</div>
-            </div>
-            
-            <div class="about-content fade-in">
-                <h3>Senior Infrastructure Engineer</h3>
-                <p>
-                    I'm a results-driven Senior Data Centre and Network Engineer with 5+ years of experience 
-                    designing and deploying enterprise-grade infrastructure for Fortune 500 financial institutions 
-                    and telecommunications companies. I specialize in designing scalable data centre fabrics 
-                    (VXLAN/EVPN), managing complex hybrid cloud environments, and implementing zero-trust security 
-                    architectures.
-                </p>
-                <p>
-                    My expertise spans network automation (Python, Ansible), cloud connectivity (AWS Direct Connect, 
-                    OCI FastConnect), and enterprise security (Palo Alto, Fortinet). I'm passionate about building 
-                    reliable, efficient, and secure infrastructure that scales.
-                </p>
-                
-                <div class="stats-grid">
-                    <div class="stat-card fade-in">
-                        <div class="stat-number">5</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-card fade-in">
-                        <div class="stat-number">300</div>
-                        <div class="stat-label">+ Branches Managed</div>
-                    </div>
-                    <div class="stat-card fade-in">
-                        <div class="stat-number">99.9</div>
-                        <div class="stat-label">% SLA Uptime</div>
-                    </div>
-                    <div class="stat-card fade-in">
-                        <div class="stat-number">800</div>
-                        <div class="stat-label">+ Nodes Monitored</div>
-                    </div>
-                </div>
-            </div>
+        <div class="contact-link-row">
+          <span class="contact-link-label">GitHub</span>
+          <a href="https://github.com/Tharaniraj" target="_blank">github.com/Tharaniraj</a>
         </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <h2 class="section-title">Core Expertise</h2>
-        
-        <div class="skills-container">
-            <div class="skill-card fade-in">
-                <div class="skill-icon">🏗️</div>
-                <div class="skill-category">Data Centre</div>
-                <div class="skill-badges">
-                    <span class="badge">VXLAN/EVPN</span>
-                    <span class="badge">Spine-Leaf CLOS</span>
-                    <span class="badge">Cisco Nexus NX-OS</span>
-                    <span class="badge">BGP EVPN</span>
-                    <span class="badge">F5 LTM/GTM</span>
-                    <span class="badge">Anycast Gateway</span>
-                </div>
-                <div class="skill-level-wrap">
-                    <div class="skill-level-bar"><div class="skill-level-fill" style="--level:95%"></div></div>
-                    <span class="skill-level-label">Expert</span>
-                </div>
-            </div>
-
-            <div class="skill-card fade-in">
-                <div class="skill-icon">🔗</div>
-                <div class="skill-category">Networking</div>
-                <div class="skill-badges">
-                    <span class="badge">BGP / OSPF / MPLS</span>
-                    <span class="badge">IPv4 / IPv6</span>
-                    <span class="badge">HSRP / VRRP</span>
-                    <span class="badge">QoS</span>
-                    <span class="badge">STP / RSTP</span>
-                    <span class="badge">NAT / PAT</span>
-                </div>
-                <div class="skill-level-wrap">
-                    <div class="skill-level-bar"><div class="skill-level-fill" style="--level:95%"></div></div>
-                    <span class="skill-level-label">Expert</span>
-                </div>
-            </div>
-
-            <div class="skill-card fade-in">
-                <div class="skill-icon">🌐</div>
-                <div class="skill-category">SD-WAN &amp; WAN</div>
-                <div class="skill-badges">
-                    <span class="badge">Fortinet SD-WAN</span>
-                    <span class="badge">ADVPN</span>
-                    <span class="badge">IPSec VPN</span>
-                    <span class="badge">DMVPN</span>
-                    <span class="badge">GRE Tunnels</span>
-                    <span class="badge">SSL VPN</span>
-                </div>
-                <div class="skill-level-wrap">
-                    <div class="skill-level-bar"><div class="skill-level-fill" style="--level:88%"></div></div>
-                    <span class="skill-level-label">Advanced</span>
-                </div>
-            </div>
-
-            <div class="skill-card fade-in">
-                <div class="skill-icon">☁️</div>
-                <div class="skill-category">Cloud &amp; Hybrid</div>
-                <div class="skill-badges">
-                    <span class="badge">AWS Direct Connect</span>
-                    <span class="badge">AWS Transit Gateway</span>
-                    <span class="badge">OCI FastConnect</span>
-                    <span class="badge">Azure ExpressRoute</span>
-                    <span class="badge">GCP VPN</span>
-                    <span class="badge">Hybrid Architecture</span>
-                </div>
-                <div class="skill-level-wrap">
-                    <div class="skill-level-bar"><div class="skill-level-fill" style="--level:75%"></div></div>
-                    <span class="skill-level-label">Proficient</span>
-                </div>
-            </div>
-
-            <div class="skill-card fade-in">
-                <div class="skill-icon">🔒</div>
-                <div class="skill-category">Security</div>
-                <div class="skill-badges">
-                    <span class="badge">Palo Alto NGFW</span>
-                    <span class="badge">FortiGate</span>
-                    <span class="badge">Zero-Trust</span>
-                    <span class="badge">802.1x NAC</span>
-                    <span class="badge">PCI DSS</span>
-                    <span class="badge">CEH v13</span>
-                </div>
-                <div class="skill-level-wrap">
-                    <div class="skill-level-bar"><div class="skill-level-fill" style="--level:82%"></div></div>
-                    <span class="skill-level-label">Advanced</span>
-                </div>
-            </div>
-
-            <div class="skill-card fade-in">
-                <div class="skill-icon">🐍</div>
-                <div class="skill-category">Automation</div>
-                <div class="skill-badges">
-                    <span class="badge">Python 3</span>
-                    <span class="badge">Netmiko</span>
-                    <span class="badge">Nornir</span>
-                    <span class="badge">Ansible</span>
-                    <span class="badge">Jinja2</span>
-                    <span class="badge">Git</span>
-                </div>
-                <div class="skill-level-wrap">
-                    <div class="skill-level-bar"><div class="skill-level-fill" style="--level:78%"></div></div>
-                    <span class="skill-level-label">Advanced</span>
-                </div>
-            </div>
+        <div class="contact-link-row">
+          <span class="contact-link-label">Location</span>
+          <a>Colombo, Sri Lanka — Open to Relocation</a>
         </div>
-    </section>
+      </div>
+    </div>
+    <form class="reveal form-wrap" id="contactForm">
+      <div class="form-field">
+        <label for="fname">Name</label>
+        <input type="text" id="fname" name="name" required placeholder="Your name">
+      </div>
+      <div class="form-field">
+        <label for="femail">Email</label>
+        <input type="email" id="femail" name="email" required placeholder="your@email.com">
+      </div>
+      <div class="form-field">
+        <label for="fmsg">Message</label>
+        <textarea id="fmsg" name="message" required placeholder="Your message..."></textarea>
+      </div>
+      <button type="submit" class="btn-send">Send Message</button>
+    </form>
+  </div>
+</section>
 
-    <div class="divider"></div>
+<!-- Footer -->
+<footer>
+  <div class="footer-name">Gnanapiragasam Tharaniraj</div>
+  <div class="footer-socials">
+    <a href="https://github.com/Tharaniraj" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/sgtharaniraj" target="_blank">LinkedIn</a>
+    <a href="mailto:sgtharaniraj@gmail.com">Email</a>
+  </div>
+  <div class="footer-copy">&copy; 2025</div>
+</footer>
 
-    <!-- Experience Section -->
-    <section class="experience" id="experience">
-        <h2 class="section-title">Work Experience</h2>
-        
-        <div class="timeline">
-            <div class="timeline-item fade-in">
-                <div class="timeline-date">Aug 2024 – Present</div>
-                <div class="timeline-title">Lead Engineer – Data Centre, Network & Infrastructure Security</div>
-                <div class="timeline-company">Commercial Bank of Ceylon PLC</div>
-                <ul class="timeline-bullets">
-                    <li>Designed SDN spine-leaf VXLAN/EVPN DC fabric for HO + DR sites</li>
-                    <li>Implemented AWS Direct Connect + OCI FastConnect hybrid cloud connectivity</li>
-                    <li>Led Python/Ansible automation reducing provisioning time by 40%</li>
-                    <li>Deployed Palo Alto + Fortinet NGFW with Zero-Trust and PCI DSS compliance</li>
-                    <li>Managed 200+ branches LAN/WAN with BGP, OSPF, MPLS, HSRP/VRRP</li>
-                    <li>Configured F5 LTM/GTM load balancing, WAF, IPS/IDS, 802.1x NAC</li>
-                </ul>
-            </div>
+<script>
+/* ── Nav ────────────────────────────────────── */
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+function closeNav() {
+  document.getElementById('navLinks').classList.remove('open');
+}
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
+});
 
-            <div class="timeline-item fade-in">
-                <div class="timeline-date">Jan 2023 – Jul 2024</div>
-                <div class="timeline-title">Network Engineer – TAC / DE DevOps</div>
-                <div class="timeline-company">Dialog Axiata PLC | Sri Lanka's Largest Telco</div>
-                <ul class="timeline-bullets">
-                    <li>Managed 800+ enterprise corporate nodes with BGP, MPLS, OSPF</li>
-                    <li>Deployed Fortinet SD-WAN for 10+ enterprise clients across 300+ branches</li>
-                    <li>Executed multi-country SD-WAN deployments with zero disruption</li>
-                    <li>Reduced MTTR by 35% while maintaining 99.9%+ SLA</li>
-                    <li>Developed Python automation scripts reducing manual provisioning by 40%</li>
-                </ul>
-            </div>
+/* ── Reveal on scroll ───────────────────────── */
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-            <div class="timeline-item fade-in">
-                <div class="timeline-date">Jun 2022 – Dec 2022</div>
-                <div class="timeline-title">Network Engineer – Enterprise Infrastructure</div>
-                <div class="timeline-company">SevenX Lanka | TATA Communications Partner</div>
-                <ul class="timeline-bullets">
-                    <li>Deployed enterprise routers, switches, and NGFW across multi-vendor environments</li>
-                    <li>Configured Fortinet FortiGate, Cisco, Huawei devices</li>
-                    <li>Managed BGP, OSPF, SD-WAN, and LLD documentation</li>
-                </ul>
-            </div>
+/* ── Contact form ───────────────────────────── */
+document.getElementById('contactForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const btn = e.target.querySelector('.btn-send');
+  btn.textContent = 'Sent ✓'; btn.disabled = true;
+  setTimeout(() => { btn.textContent = 'Send Message'; btn.disabled = false; e.target.reset(); }, 3000);
+});
 
-            <div class="timeline-item fade-in">
-                <div class="timeline-date">Feb 2021 – May 2022</div>
-                <div class="timeline-title">Assistant Network Engineer – Infrastructure & Systems</div>
-                <div class="timeline-company">Hayleys Fentons Ltd</div>
-                <ul class="timeline-bullets">
-                    <li>Executed end-to-end enterprise network infrastructure projects</li>
-                    <li>Deployed Fortinet FortiGate, Cisco Catalyst switches, wireless APs</li>
-                    <li>Managed structured cabling (CAT6, fibre optic), IP-PABX, CCTV, ACS</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+/* ── Small subtle particle animation ────────── */
+(function() {
+  const canvas = document.getElementById('bg-canvas');
+  const ctx = canvas.getContext('2d');
 
-    <div class="divider"></div>
+  function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        
-        <div class="projects-grid">
+  const COUNT = Math.min(60, Math.floor(window.innerWidth / 22));
 
-            <!-- ① SDN Data Centre Fabric -->
-            <div class="project-card fade-in">
-                <div class="project-header">
-                    <div class="project-top-row">
-                        <span class="project-category-badge badge-production">Production</span>
-                        <span class="project-category-badge badge-featured">⭐ Featured</span>
-                    </div>
-                    <div class="project-title">SDN Data Centre Fabric</div>
-                    <div class="project-description">Modernised a legacy STP-based DC into a scalable multi-tenant VXLAN/EVPN CLOS fabric across HQ &amp; DR sites</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-detail-block">
-                        <strong class="detail-label">Problem</strong>
-                        <p class="detail-text">Legacy STP/MSTP fabric caused slow convergence (30–60 s failover), broadcast storms under load, and couldn't support multi-tenancy for growing banking workloads across HQ and DR.</p>
-                    </div>
-                    <hr class="project-divider">
-                    <div class="project-detail-block">
-                        <strong class="detail-label">Solution</strong>
-                        <p class="detail-text">Designed a 2-tier Spine-Leaf CLOS architecture on Cisco Nexus NX-OS. Deployed BGP EVPN as control plane and VXLAN as data plane with L2/L3 VNIs, distributed anycast gateways, and ARP suppression for tenant isolation.</p>
-                    </div>
-                    <hr class="project-divider">
-                    <div class="project-tech">
-                        <span class="tech-badge">Cisco Nexus NX-OS</span>
-                        <span class="tech-badge">VXLAN / EVPN</span>
-                        <span class="tech-badge">BGP EVPN</span>
-                        <span class="tech-badge">Spine-Leaf CLOS</span>
-                        <span class="tech-badge">Anycast Gateway</span>
-                        <span class="tech-badge">L3 VNI</span>
-                    </div>
-                    <div class="project-outcomes">
-                        <span class="outcome-badge">✓ Sub-second failover</span>
-                        <span class="outcome-badge">✓ 99.99% uptime</span>
-                        <span class="outcome-badge">✓ Zero broadcast storms</span>
-                        <span class="outcome-badge">✓ Full multi-tenancy</span>
-                    </div>
-                </div>
-            </div>
+  class Dot {
+    constructor() { this.reset(true); }
+    reset(init) {
+      this.x  = Math.random() * canvas.width;
+      this.y  = init ? Math.random() * canvas.height : canvas.height + 10;
+      this.r  = .5 + Math.random() * 1.2;
+      this.vx = (Math.random() - .5) * .18;
+      this.vy = -.12 - Math.random() * .22;
+      this.a  = .06 + Math.random() * .14;
+      this.ta = this.a;
+      this.life = 0;
+      this.maxL = 400 + Math.random() * 600;
+    }
+    update() {
+      this.x += this.vx; this.y += this.vy; this.life++;
+      if (this.life < 60) this.a = (this.life / 60) * this.ta;
+      else if (this.life > this.maxL - 60) this.a = ((this.maxL - this.life) / 60) * this.ta;
+      if (this.life > this.maxL || this.y < -10) this.reset();
+    }
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255,255,255,${this.a})`;
+      ctx.fill();
+    }
+  }
 
-            <!-- ② Hybrid DC-Cloud Connectivity -->
-            <div class="project-card fade-in">
-                <div class="project-header">
-                    <div class="project-top-row">
-                        <span class="project-category-badge badge-production">Production</span>
-                        <span class="project-category-badge badge-featured">⭐ Featured</span>
-                    </div>
-                    <div class="project-title">Hybrid DC-Cloud Connectivity</div>
-                    <div class="project-description">Private dedicated multi-cloud connectivity for a Tier-1 bank via AWS &amp; OCI with automatic BGP failover</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-detail-block">
-                        <strong class="detail-label">Problem</strong>
-                        <p class="detail-text">Banking applications hosted on AWS and Oracle Cloud required private, low-latency connectivity from on-premise DC. Public internet paths failed PCI DSS compliance and SLA requirements.</p>
-                    </div>
-                    <hr class="project-divider">
-                    <div class="project-detail-block">
-                        <strong class="detail-label">Solution</strong>
-                        <p class="detail-text">Provisioned AWS Direct Connect with Transit Gateway for AWS workloads, OCI FastConnect for Oracle Banking Core, and Azure ExpressRoute as tertiary path. Configured BGP route policies with MED/AS-path for automatic failover between providers.</p>
-                    </div>
-                    <hr class="project-divider">
-                    <div class="project-tech">
-                        <span class="tech-badge">AWS Direct Connect</span>
-                        <span class="tech-badge">AWS Transit Gateway</span>
-                        <span class="tech-badge">OCI FastConnect</span>
-                        <span class="tech-badge">BGP Route Policy</span>
-                        <span class="tech-badge">Azure ExpressRoute</span>
-                    </div>
-                    <div class="project-outcomes">
-                        <span class="outcome-badge">✓ Sub-10ms latency SLA</span>
-                        <span class="outcome-badge">✓ Zero-downtime migration</span>
-                        <span class="outcome-badge">✓ PCI DSS compliant</span>
-                        <span class="outcome-badge">✓ Auto BGP failover</span>
-                    </div>
-                </div>
-            </div>
+  /* sparse connecting lines */
+  const dots = Array.from({ length: COUNT }, () => new Dot());
+  const LINK_DIST = 120;
 
-            <!-- ③ VXLAN/EVPN Lab -->
-            <div class="project-card fade-in">
-                <div class="project-header">
-                    <div class="project-top-row">
-                        <span class="project-category-badge badge-lab">Lab / Research</span>
-                    </div>
-                    <div class="project-title">VXLAN/EVPN Underlay-Overlay Lab</div>
-                    <div class="project-description">Full CLOS fabric simulation — OSPF underlay, BGP EVPN overlay, symmetric IRB, and ARP suppression — built in EVE-NG</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-detail-block">
-                        <strong class="detail-label">Problem</strong>
-                        <p class="detail-text">Needed a controlled environment to validate VXLAN/EVPN design decisions — VNI assignment, ARP suppression, BUM traffic handling, ECMP load-balancing — before production rollout at the bank.</p>
-                    </div>
-                    <hr class="project-divider">
-                    <div class="project-detail-block">
-                        <strong class="detail-label">Solution</strong>
-                        <p class="detail-text">Built a 2-spine 4-leaf topology in EVE-NG using Cisco NX-OS and Arista vEOS. Configured OSPF + BFD underlay, BGP EVPN control plane, L2VNI and L3VNI with symmetric IRB, ingress replication for BUM, and ECMP across all spine uplinks.</p>
-                    </div>
-                    <hr class="project-divider">
-                    <div class="project-tech">
-                        <span class="tech-badge">EVE-NG</span>
-                        <span class="tech-badge">Cisco NX-OS</span>
-                        <span class="tech-badge">Arista vEOS</span>
-                        <span class="tech-badge">OSPF + BFD</span>
-                        <span class="tech-badge">BGP EVPN</span>
-                        <span class="tech-badge">Symmetric IRB</span>
-                    </div>
-                    <div class="project-outcomes">
-                        <span class="outcome-badge">✓ ARP suppression validated</span>
-                        <span class="outcome-badge">✓ ECMP across 4 paths</span>
-                        <span class="outcome-badge">✓ BUM traffic optimised</span>
-                        <span class="outcome-badge">✓ Production design doc</span>
-                    </div>
-                    <a href="https://github.com/Tharaniraj" class="project-link" target="_blank">View on GitHub →</a>
-                </div>
-            </div>
+  function frame() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    dots.forEach(d => d.update());
 
-            <!-- ④ Network Automation Pipeline -->
-            <div class="project-card fade-in">
-                <div class="project-header">
-                    <div class="project-top-row">
-                        <span class="project-category-badge badge-tool">Automation</span>
-                    </div>
-                    <div class="project-title">Network Automation Pipeline</div>
-                    <div class="project-description">Infrastructure-as-Code pipeline for zero-touch provisioning across 200+ multi-vendor branch devices</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-detail-block">
-                        <strong class="detail-label">Problem</strong>
-                        <p class="detail-text">Manual provisioning of 200+ branch routers and switches took 3–5 days per rollout cycle and was prone to human error and configuration drift across Cisco, Fortinet, and Huawei devices.</p>
-                    </div>
-                    <hr class="project-divider">
-                    <div class="project-detail-block">
-                        <strong class="detail-label">Solution</strong>
-                        <p class="detail-text">Built a Python + Netmiko/Nornir automation framework with Jinja2 templating for multi-vendor config generation. Integrated Ansible playbooks for orchestration and Git for version-controlled config storage with one-command rollback.</p>
-                    </div>
-                    <hr class="project-divider">
-                    <div class="project-tech">
-                        <span class="tech-badge">Python 3</span>
-                        <span class="tech-badge">Netmiko</span>
-                        <span class="tech-badge">Nornir</span>
-                        <span class="tech-badge">Ansible</span>
-                        <span class="tech-badge">Jinja2</span>
-                        <span class="tech-badge">Git</span>
-                    </div>
-                    <div class="project-outcomes">
-                        <span class="outcome-badge">✓ 40% faster provisioning</span>
-                        <span class="outcome-badge">✓ Zero config drift</span>
-                        <span class="outcome-badge">✓ 200+ devices managed</span>
-                        <span class="outcome-badge">✓ Git rollback support</span>
-                    </div>
-                    <a href="https://github.com/Tharaniraj" class="project-link" target="_blank">View on GitHub →</a>
-                </div>
-            </div>
+    /* lines between close dots */
+    for (let i = 0; i < dots.length; i++) {
+      for (let j = i + 1; j < dots.length; j++) {
+        const dx = dots[i].x - dots[j].x;
+        const dy = dots[i].y - dots[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < LINK_DIST) {
+          const op = (1 - dist / LINK_DIST) * .04;
+          ctx.strokeStyle = `rgba(255,255,255,${op})`;
+          ctx.lineWidth = .5;
+          ctx.beginPath();
+          ctx.moveTo(dots[i].x, dots[i].y);
+          ctx.lineTo(dots[j].x, dots[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+    dots.forEach(d => d.draw());
+    requestAnimationFrame(frame);
+  }
+  frame();
+})();
 
-            <!-- ⑤ Python IPAM Tool -->
-            <div class="project-card fade-in">
-                <div class="project-header">
-                    <div class="project-top-row">
-                        <span class="project-category-badge badge-tool">Tool</span>
-                    </div>
-                    <div class="project-title">Python IPAM Tool</div>
-                    <div class="project-description">Custom IP Address Management desktop app with GUI, subnet calculator, conflict detection, and audit exports</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-detail-block">
-                        <strong class="detail-label">Problem</strong>
-                        <p class="detail-text">No affordable IPAM tool existed for tracking 100,000+ IP assignments across 300+ branches. Spreadsheet-based tracking caused allocation conflicts, duplicate IPs, and audit failures.</p>
-                    </div>
-                    <hr class="project-divider">
-                    <div class="project-detail-block">
-                        <strong class="detail-label">Solution</strong>
-                        <p class="detail-text">Built a desktop IPAM application in Python using Tkinter GUI and SQLite. Features: CIDR subnet calculator, real-time IP search, duplicate/conflict detection, and CSV/JSON export for compliance audit reports.</p>
-                    </div>
-                    <hr class="project-divider">
-                    <div class="project-tech">
-                        <span class="tech-badge">Python 3</span>
-                        <span class="tech-badge">Tkinter GUI</span>
-                        <span class="tech-badge">SQLite</span>
-                        <span class="tech-badge">ipaddress module</span>
-                        <span class="tech-badge">CSV / JSON export</span>
-                    </div>
-                    <div class="project-outcomes">
-                        <span class="outcome-badge">✓ 100k+ IP records</span>
-                        <span class="outcome-badge">✓ Real-time search</span>
-                        <span class="outcome-badge">✓ Zero allocation conflicts</span>
-                        <span class="outcome-badge">✓ Audit-ready exports</span>
-                    </div>
-                    <a href="https://github.com/Tharaniraj" class="project-link" target="_blank">View on GitHub →</a>
-                </div>
-            </div>
+/* ── Glow effect on cards ────────── */
+document.querySelectorAll('.proj-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+    card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+  });
+});
 
-            <!-- ⑥ Enterprise SD-WAN Rollout -->
-            <div class="project-card fade-in">
-                <div class="project-header">
-                    <div class="project-top-row">
-                        <span class="project-category-badge badge-production">Production</span>
-                    </div>
-                    <div class="project-title">Enterprise SD-WAN Rollout</div>
-                    <div class="project-description">Multi-country Fortinet SD-WAN deployment for 10+ enterprise clients across 300+ branches with zero service disruption</div>
-                </div>
-                <div class="project-content">
-                    <div class="project-detail-block">
-                        <strong class="detail-label">Problem</strong>
-                        <p class="detail-text">Enterprise clients with 300+ branches relied on costly MPLS circuits with no application-aware routing. WAN link failures caused full-site outages with no automatic failover path.</p>
-                    </div>
-                    <hr class="project-divider">
-                    <div class="project-detail-block">
-                        <strong class="detail-label">Solution</strong>
-                        <p class="detail-text">Designed Fortinet SD-WAN with ADVPN hub-and-spoke topology, dual-ISP with application SLA steering, and IPSec mesh overlays. Phased MPLS-to-SD-WAN migration with live traffic validation at each step ensured zero downtime cutover.</p>
-                    </div>
-                    <hr class="project-divider">
-                    <div class="project-tech">
-                        <span class="tech-badge">Fortinet SD-WAN</span>
-                        <span class="tech-badge">ADVPN</span>
-                        <span class="tech-badge">IPSec VPN</span>
-                        <span class="tech-badge">App-Aware Routing</span>
-                        <span class="tech-badge">Dual-ISP HA</span>
-                    </div>
-                    <div class="project-outcomes">
-                        <span class="outcome-badge">✓ 99.9%+ SLA maintained</span>
-                        <span class="outcome-badge">✓ 300+ branches migrated</span>
-                        <span class="outcome-badge">✓ MTTR reduced 35%</span>
-                        <span class="outcome-badge">✓ Zero-disruption cutover</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Certifications Section -->
-    <section class="certifications" id="certifications">
-        <h2 class="section-title">Certifications & Credentials</h2>
-        
-        <div class="certifications-container">
-            <div class="cert-card fade-in">
-                <div class="cert-icon">🎓</div>
-                <div class="cert-name">CCNP Enterprise</div>
-                <div class="cert-issuer">Cisco</div>
-                <div class="cert-status">Current</div>
-            </div>
-
-            <div class="cert-card fade-in">
-                <div class="cert-icon">🔐</div>
-                <div class="cert-name">CEH v13</div>
-                <div class="cert-issuer">EC-Council</div>
-                <div class="cert-status">Valid</div>
-            </div>
-
-            <div class="cert-card fade-in">
-                <div class="cert-icon">🛡️</div>
-                <div class="cert-name">Fortinet NSE 1,2,3,4</div>
-                <div class="cert-issuer">Fortinet</div>
-                <div class="cert-status">Valid</div>
-            </div>
-
-            <div class="cert-card fade-in">
-                <div class="cert-icon">📋</div>
-                <div class="cert-name">CCNA</div>
-                <div class="cert-issuer">Cisco</div>
-                <div class="cert-status">Valid</div>
-            </div>
-
-            <div class="cert-card fade-in">
-                <div class="cert-icon">⚙️</div>
-                <div class="cert-name">CCNP SPCOR</div>
-                <div class="cert-issuer">Cisco</div>
-                <div class="cert-status">In Progress</div>
-            </div>
-
-            <div class="cert-card fade-in">
-                <div class="cert-icon">🎓</div>
-                <div class="cert-name">BSc (Hons) IT</div>
-                <div class="cert-issuer">University of Moratuwa</div>
-                <div class="cert-status">Graduated</div>
-            </div>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        
-        <div class="contact-container">
-            <div class="contact-info fade-in">
-                <h3>Let's Connect</h3>
-                
-                <div class="contact-item">
-                    <div class="contact-item-icon">📧</div>
-                    <div>
-                        <strong>Email</strong><br>
-                        <a href="mailto:sgtharaniraj@gmail.com">sgtharaniraj@gmail.com</a>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-item-icon">📱</div>
-                    <div>
-                        <strong>Phone</strong><br>
-                        <a href="tel:+94777339218">+94 777 339 218</a>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-item-icon">💼</div>
-                    <div>
-                        <strong>LinkedIn</strong><br>
-                        <a href="https://linkedin.com/in/sgtharaniraj" target="_blank">linkedin.com/in/sgtharaniraj</a>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-item-icon">🐙</div>
-                    <div>
-                        <strong>GitHub</strong><br>
-                        <a href="https://github.com/Tharaniraj" target="_blank">github.com/Tharaniraj</a>
-                    </div>
-                </div>
-            </div>
-
-            <form class="contact-form fade-in">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Your name">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required placeholder="your@email.com">
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required placeholder="Your message..."></textarea>
-                </div>
-
-                <button type="submit" class="btn-submit">Send Message ✉️</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content fade-in">
-            <div class="footer-tagline">Gnanapiragasam Tharaniraj</div>
-            <p>Senior Data Centre & Network Engineer | Infrastructure Architect</p>
-            
-            <div class="footer-socials">
-                <a href="https://github.com/Tharaniraj" class="social-link" target="_blank">🐙</a>
-                <a href="https://linkedin.com/in/sgtharaniraj" class="social-link" target="_blank">💼</a>
-                <a href="mailto:sgtharaniraj@gmail.com" class="social-link">📧</a>
-                <a href="tel:+94777339218" class="social-link">📱</a>
-            </div>
-            
-            <p>&copy; 2025 Gnanapiragasam Tharaniraj. All rights reserved. | Open to opportunities in Equinix, AWS, DBS Bank, Standard Chartered</p>
-        </div>
-    </footer>
+</script>
 </body>
 </html>
